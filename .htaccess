@@ -1,0 +1,25 @@
+# Security Headers
+Header always set X-Content-Type-Options "nosniff"
+Header always set X-Frame-Options "DENY"
+Header always set Referrer-Policy "strict-origin-when-cross-origin"
+Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+Header always set Strict-Transport-Security "max-age=63072000; includeSubDomains; preload"
+
+# Cache static assets for 1 year
+<FilesMatch "\.(webp|png|jpg|jpeg|svg|mp4|woff2|ttf|js|css)$">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
+
+# Serve WebP when available
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTP_ACCEPT} image/webp
+  RewriteCond %{REQUEST_FILENAME} \.(png|jpg|jpeg)$
+  RewriteCond %{REQUEST_FILENAME}.webp -f
+  RewriteRule ^(.+)\.(png|jpg|jpeg)$ $1.webp [T=image/webp,L]
+</IfModule>
+
+# Correct MIME types
+AddType image/webp .webp
+AddType font/woff2 .woff2
+AddType video/mp4 .mp4

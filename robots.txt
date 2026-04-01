@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /admin-9975.html
+Sitemap: https://www.lucasvfa.com.br/sitemap.xml

@@ -1,0 +1,1958 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project — Lucas Vaz</title>
+  <meta name="description" content="Portfolio project by Lucas Vaz — Art Director, Illustrator and Motion Designer.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="canonical" href="https://www.lucasvfa.com.br/project.html">
+  <!-- CSP active on production server via headers (vercel.json / _headers / .htaccess) -->
+  <meta property="og:title" content="Project — Lucas Vaz Portfolio">
+  <meta property="og:description" content="Graphic Design, Illustration & Art Direction by Lucas Vaz">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://www.lucasvfa.com.br/assets/img/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lucas Vaz Portfolio">
+  <meta name="twitter:description" content="Art direction, illustration and motion design portfolio.">
+  <meta name="twitter:image" content="https://www.lucasvfa.com.br/assets/img/cover.jpg">
+  <meta name="theme-color" content="#000000">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
+
+    @font-face {
+      font-family: 'OFFBIT';
+      src: url('assets/fonts/OffBit-101.woff2') format('woff2'),
+           url('assets/fonts/OffBit-101.ttf') format('truetype');
+      font-weight: 101;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    :root {
+      --bg: #000000;
+      --accent: #C42BAB;
+      --text: #FFFFFF;
+      --text-secondary: #999999;
+      --text-tertiary: #808080;
+      --surface: #222222;
+      --border: rgba(187, 187, 187, 0.2);
+      --font: 'Inter Display', 'Inter', -apple-system, sans-serif;
+      --gutter: clamp(1.5rem, 14vw, 225px);
+      --radius: 8px;
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+    html.lenis, html.lenis body { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: -5px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 128px 128px;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: 9999;
+      will-change: transform;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    img, video { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+
+    @media (max-width: 768px) {
+      body::after { opacity: 0.06; }
+    }
+
+    /* ===== PAGE TRANSITIONS ===== */
+    @keyframes fadeOutOverlay { to { opacity: 0; } }
+    .page-transition {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 99999;
+      pointer-events: none;
+      opacity: 1;
+      animation: fadeOutOverlay 0.5s 0.05s forwards;
+    }
+    .page-transition.in { animation: none; opacity: 1; pointer-events: all; transition: opacity 0.3s; }
+    .page-transition.in.out { opacity: 0; }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top-wrap {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 var(--gutter) 2rem;
+    }
+    .back-to-top {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .back-to-top:hover {
+      background: rgba(196, 43, 171, 0.12);
+      transform: translateY(-3px);
+    }
+    .back-to-top svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ===== BACK LINK ===== */
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed; top: 0; left: 0; width: 100%; max-width: 100vw; z-index: 10000;
+      padding: 1.5rem var(--gutter);
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(19, 19, 19, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      will-change: transform;
+      transform: translateZ(0);
+    }
+    .back-link {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      transition: color 0.3s ease;
+      white-space: nowrap;
+    }
+    .back-link:hover { color: var(--accent); }
+    .nav-links { display: flex; gap: 2rem; list-style: none; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .nav-links a { position: relative; transition: color 0.3s ease; color: #fff; text-shadow: 0 1px 8px rgba(0,0,0,0.8), 0 0 3px rgba(0,0,0,1); padding: 0.5rem 0; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s ease; }
+    .nav-links a:hover::after { width: 100%; }
+    .lang-toggle {
+      display: flex; align-items: center;
+      font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-left: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;
+      overflow: hidden;
+    }
+    .lang-btn {
+      position: relative;
+      background: none; border: none; color: rgba(255,255,255,0.4);
+      padding: 0.625rem 0.75rem; min-height: 44px; cursor: pointer; transition: all 0.3s ease;
+      font-family: var(--font); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+    .lang-btn.active { color: #fff; background: rgba(255,255,255,0.1); padding-left: 1.125rem; }
+    .lang-btn.active::before {
+      content: ''; position: absolute;
+      left: 8px; top: 50%; transform: translateY(-50%);
+      width: 5px; height: 5px; border-radius: 50%;
+      background: var(--accent);
+    }
+    .lang-btn:hover { color: #fff; }
+
+    /* ===== HERO ===== */
+    .project-hero {
+      position: relative;
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 12rem var(--gutter) 6rem;
+      overflow: hidden;
+    }
+    .project-hero-bg {
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background-size: cover;
+      background-position: center 60%;
+      opacity: 0.18;
+      filter: blur(8px);
+      transform: scale(1.05);
+      z-index: 0;
+    }
+    .project-hero-bg video {
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .project-hero h1,
+    .project-hero .project-type,
+    .project-hero .project-desc,
+    .project-hero .project-role {
+      position: relative;
+      z-index: 1;
+    }
+    .project-hero h1 {
+      font-family: 'OFFBIT', monospace;
+      font-weight: 101;
+      font-size: clamp(4rem, 10vw, 11rem);
+      line-height: 1;
+      letter-spacing: 0.05em;
+      margin-bottom: 1rem;
+    }
+    .project-hero .project-type {
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-variant: small-caps;
+    }
+    .project-hero .project-desc {
+      margin-top: 1.5rem;
+      font-size: 1.15rem;
+      color: var(--text-secondary);
+      max-width: 780px;
+      line-height: 1.7;
+      text-wrap: balance;
+    }
+    .project-hero .project-role {
+      margin-top: 0.8rem;
+      font-size: 0.85rem;
+      font-weight: 400;
+      letter-spacing: 0.1em;
+      color: var(--text-tertiary);
+      text-transform: uppercase;
+    }
+
+    /* ===== MEDIA GRID (CSS Grid — no JS masonry) ===== */
+    .media-grid-wrapper {
+      padding: 0 var(--gutter);
+      margin: 80px auto 0;
+      padding-bottom: 100px;
+      max-width: 1800px;
+    }
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+    .media-item {
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: var(--radius);
+      background: #111;
+    }
+    /* Span classes */
+    .span-full { grid-column: 1 / -1; }
+    .span-half { grid-column: span 3; }
+    .span-third { grid-column: span 2; }
+    .span-wide { grid-column: span 4; }
+    .span-narrow { grid-column: span 2; }
+    .media-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .media-item video {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: var(--radius);
+      background: #111;
+      transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .span-third .media-item,
+    .span-narrow .media-item,
+    .media-item.span-third,
+    .media-item.span-narrow {
+      aspect-ratio: 1 / 1;
+    }
+    .span-third video,
+    .span-narrow video,
+    .span-third img,
+    .span-narrow img {
+      height: 100%;
+      object-fit: cover;
+    }
+    /* Portrait videos (social media content) */
+    .media-item.portrait video {
+      aspect-ratio: 9 / 16;
+    }
+    /* Square videos (reactions, loops) */
+    .media-item.square video {
+      aspect-ratio: 1 / 1;
+    }
+    .media-item:hover img,
+    .media-item:hover video {
+      transform: scale(1.02);
+    }
+
+    /* Video with audio — play button overlay */
+    .media-item video {
+      cursor: pointer;
+    }
+
+    /* ===== CATEGORY SECTIONS ===== */
+    .category-section {
+      margin-top: 80px;
+      margin-bottom: 20px;
+      grid-column: 1 / -1;
+    }
+    .category-section:first-child {
+      margin-top: 0;
+    }
+    .category-title {
+      font-family: 'OFFBIT', monospace;
+      font-weight: 101;
+      font-size: clamp(1.8rem, 4.5vw, 3.5rem);
+      color: #fff;
+      margin-bottom: 28px;
+      letter-spacing: 0.05em;
+      opacity: 0.7;
+      padding-bottom: 12px;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 20px;
+    }
+
+    /* Reaction row: 4 items in a row */
+    .reaction-row {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+    }
+    .reaction-row .media-item video {
+      aspect-ratio: 1 / 1;
+    }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(50px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== LIGHTBOX ===== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 10001;
+      background: rgba(0, 0, 0, 0.94);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+      cursor: zoom-out;
+    }
+    .lightbox.active {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .lightbox-content img,
+    .lightbox-content video {
+      max-width: 92vw;
+      max-height: 92vh;
+      object-fit: contain;
+      display: block;
+      transform: scale(0.92);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lightbox.active .lightbox-content img,
+    .lightbox.active .lightbox-content video {
+      transform: scale(1);
+    }
+    .lightbox-content iframe {
+      max-width: 92vw;
+      max-height: 92vh;
+      width: 80vw;
+      height: 45vw;
+      max-height: 80vh;
+      border: none;
+      transform: scale(0.92);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .lightbox.active .lightbox-content iframe {
+      transform: scale(1);
+    }
+
+    /* YouTube embed wrapper */
+    .yt-embed {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%; /* 16:9 */
+      background: #111;
+      border-radius: var(--radius);
+      overflow: hidden;
+    }
+    .yt-embed iframe {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      border: none;
+    }
+    .yt-embed .yt-poster {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+    }
+    .yt-embed .yt-play {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 68px; height: 48px;
+      background: rgba(0,0,0,0.7);
+      border-radius: var(--radius);
+      cursor: pointer;
+      pointer-events: none;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.2s ease;
+    }
+    .yt-embed:hover .yt-play { background: #C42BAB; }
+    .yt-embed .yt-play svg { width: 24px; height: 24px; fill: #fff; }
+    .lightbox-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      z-index: 1001;
+      line-height: 1;
+      font-family: var(--font);
+      transition: color 0.3s ease;
+      min-width: 44px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lightbox-close:hover { color: var(--accent); }
+
+    /* ===== DIVIDER ===== */
+    .divider {
+      width: 60px;
+      height: 1px;
+      background: var(--accent);
+      margin: 0 auto;
+      display: block;
+    }
+
+    /* ===== PREV / NEXT NAV ===== */
+    .project-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: clamp(5rem, 10vw, 8rem) var(--gutter);
+      max-width: 1800px;
+      margin: 0 auto;
+    }
+    .project-nav a {
+      transition: color 0.3s ease;
+      display: block;
+    }
+    .project-nav a:hover { color: #888; }
+    .project-nav .nav-label {
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      color: var(--accent);
+      text-transform: uppercase;
+      display: block;
+      margin-bottom: 0.35rem;
+    }
+    .project-nav .nav-name {
+      font-family: 'Inter Display', 'Inter', sans-serif;
+      font-size: clamp(1.4rem, 2.8vw, 2.2rem);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .project-nav a:hover .nav-name { color: #888; }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: color(display-p3 0.7686 0.1686 0.6706);
+      padding-top: clamp(5rem, 14vw, 12rem);
+    }
+    @supports not (color: color(display-p3 0 0 0)) {
+      .footer { background-color: #C42BAB; }
+    }
+    .footer-bg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .footer-overlay {
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 38%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+    }
+    .footer-logo {
+      width: clamp(60px, 8vw, 120px);
+      height: auto;
+      margin-right: calc((48px - clamp(60px, 8vw, 120px)) / 2);
+    }
+    .footer-copyright {
+      width: clamp(160px, 22vw, 320px);
+      height: auto;
+    }
+    @media (max-width: 768px) {
+      .footer-logo { width: clamp(50px, 10vw, 75px); }
+      .footer-copyright { width: clamp(140px, 28vw, 197px); }
+    }
+    @media (max-width: 480px) {
+      .footer-logo { width: clamp(50px, 14vw, 75px); }
+      .footer-copyright { width: clamp(140px, 40vw, 197px); }
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .media-grid,
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .span-half { grid-column: span 2; }
+      .span-wide { grid-column: span 3; }
+      .span-narrow { grid-column: span 1; }
+      .span-third { grid-column: span 2; }
+      .reaction-row { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .nav { padding: 1rem var(--gutter); }
+      .project-hero { padding: 8rem var(--gutter) 4rem; min-height: 50vh; }
+      .project-hero h1 { font-size: clamp(2.5rem, 8vw, 5rem); }
+      .media-grid-wrapper { padding: 0 var(--gutter); padding-bottom: 60px; margin: 60px auto 0; }
+      .project-nav { padding: 3rem var(--gutter); }
+      .media-grid,
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .span-full { grid-column: 1 / -1; }
+      .span-half,
+      .span-wide { grid-column: 1 / -1; }
+      .span-narrow,
+      .span-third { grid-column: span 1; }
+    }
+
+    /* ===== HAS AUDIO INDICATOR ===== */
+    .has-audio { position: relative; }
+    .has-audio::after {
+      content: '\1F50A';
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      font-size: 0.85rem;
+      background: rgba(0,0,0,0.6);
+      border-radius: 4px;
+      padding: 2px 6px;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* ===== MOBILE NAV TOGGLE ===== */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      min-width: 44px;
+      min-height: 44px;
+      justify-content: center;
+      align-items: center;
+      z-index: 10001;
+      border: none;
+      background: none;
+    }
+    .nav-hamburger span {
+      width: 22px; height: 1.5px;
+      background: #fff;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+    .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+
+    @media (prefers-reduced-motion: reduce) {
+      video { animation: none; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; margin-left: 0.75rem; }
+      .nav.menu-open {
+        height: 100vh; height: 100dvh;
+        align-items: flex-start;
+        background: #000;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: #000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        font-size: 1.2rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { text-shadow: none; padding: 0.75rem 1rem; min-height: 44px; display: flex; align-items: center; }
+      .back-link {
+        font-size: 0;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        border: 1px solid rgba(196, 43, 171, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .back-link::after {
+        content: '';
+        width: 18px;
+        height: 18px;
+        border-left: 2px solid #C42BAB;
+        border-bottom: 2px solid #C42BAB;
+        transform: rotate(45deg);
+        display: block;
+        margin-left: 4px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .project-hero { padding: 6rem var(--gutter) 3rem; min-height: 40vh; }
+      .project-hero h1 { font-size: clamp(2rem, 10vw, 3.5rem); }
+      .project-hero .project-desc { font-size: 1rem; }
+      .media-grid-wrapper { padding: 0 var(--gutter); padding-bottom: 40px; margin: 32px auto 0; }
+      .media-grid,
+      .category-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+      .span-full,
+      .span-half,
+      .span-wide,
+      .span-narrow,
+      .span-third { grid-column: 1 / -1; }
+      .reaction-row { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+      .project-nav { padding: 3rem var(--gutter); flex-direction: column; align-items: center; gap: 3rem; text-align: center; }
+      .project-nav a { text-align: center; display: flex; flex-direction: column; align-items: center; }
+      .project-nav .nav-label { text-align: center; }
+      .project-nav .nav-name { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#hero" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" id="mainNav" aria-label="Main navigation">
+    <a href="index.html" class="back-link" data-i18n="nav.back">&larr; Back to Portfolio</a>
+    <div style="display:flex;align-items:center;gap:0;">
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+        <li><a href="index.html#projects" data-i18n="nav.work">Work</a></li>
+        <li><a href="index.html#illustrations" data-i18n="nav.personal">Illustrations</a></li>
+        <li><a href="index.html#uiux">UI/UX</a></li>
+        <li><a href="index.html#about" data-i18n="nav.about">About</a></li>
+        <li><a href="index.html#contact" data-i18n="nav.contact">Contact</a></li>
+      </ul>
+      <div class="lang-toggle">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <button type="button" class="nav-hamburger" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <main>
+  <noscript><p style="color:#fff;text-align:center;padding:4rem;font-family:sans-serif;">This page requires JavaScript to display project content. Please enable it.</p></noscript>
+  <section class="project-hero" id="hero">
+    <h1 id="projectTitle"></h1>
+    <p class="project-type" id="projectType"></p>
+    <p class="project-desc" id="projectDesc"></p>
+    <p class="project-role" id="projectRole"></p>
+  </section>
+
+  <!-- Media Grid -->
+  <div class="media-grid-wrapper">
+    <div class="media-grid" id="mediaGrid"></div>
+  </div>
+
+  <!-- Divider -->
+  <div class="divider"></div>
+
+  <!-- Prev/Next -->
+  <nav class="project-nav" id="projectNav" aria-label="Project navigation"></nav>
+  </main>
+
+  <!-- Footer -->
+  <!-- Back to top -->
+  <div class="back-to-top-wrap">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+  </div>
+
+  <footer class="footer">
+    <img class="footer-bg" src="assets/img/footer-bg.svg" alt="" loading="lazy">
+    <div class="footer-overlay">
+      <img class="footer-copyright" src="assets/img/footer-copyright.svg" alt="© Lucas Vaz. All rights reserved.">
+      <img class="footer-logo" src="assets/img/footer-logo.svg" alt="Lucas Vaz logo">
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Media lightbox">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">&times;</button>
+    <div class="lightbox-content" id="lightboxContent"></div>
+  </div>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="assets/js/lenis.min.js"></script>
+
+  <script>
+  (function () {
+    'use strict';
+
+    // ===== PROJECT DATA =====
+    const projects = [
+      {
+        id: 'gillette', name: 'Gillette', type: 'Art Direction \u00b7 Social Media \u00b7 Motion Design',
+        desc: 'Art direction and digital content creation for Gillette\'s social media presence in Brazil.',
+        role: 'Agency: New Vegas \u00b7 Client: P&G',
+        cover: 'assets/img/gillette_cover.png',
+        hero: 'assets/img/gillette_1.png',
+        media: [
+          { src: 'assets/img/gillette_2.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/gillette_3.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/gillette_4.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/gillette_6.jpg', type: 'img', span: 'span-full' },
+          { src: 'assets/img/gillette_5.mp4', type: 'video', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'gillette-venus', name: 'Gillette Venus', type: 'Art Direction \u00b7 Social Media',
+        desc: 'Visual development and social media art direction for Gillette Venus.',
+        role: 'Agency: New Vegas \u00b7 Client: P&G',
+        cover: 'assets/img/gv_cover.png',
+        media: [
+          { src: 'assets/img/gv_1.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/gv_2.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/gv_3.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/gv_4.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/gv_5.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/gv_6.mp4', type: 'video', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'ketel-one', name: 'Ketel One Botanical', type: 'Social Media \u00b7 Art Direction',
+        desc: 'Part of the creative team that launched Ketel One Botanical on digital media in Brazil.',
+        role: 'Agency: New Vegas \u00b7 Client: Diageo',
+        cover: 'assets/img/ketel_cover.png',
+        media: [
+          { src: 'assets/img/ketel_2.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/ketel_3.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/ketel_1.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/ketel_5.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/ketel_4.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/ketel_6.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/ketel_7.png', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'doodi', name: 'Doodi', type: '2D Animation \u00b7 Illustration \u00b7 Motion',
+        desc: 'Character animation and motion design for Doodi.',
+        role: 'Agency: Ninety Eight',
+        cover: 'assets/img/doodi_cover.mp4',
+        categories: [
+          {
+            title: 'I Like to Move It',
+            media: [
+              { src: 'assets/img/doodi_moveit_1.mp4', type: 'video', span: 'span-half', hasAudio: true },
+              { src: 'assets/img/doodi-move-making-of.mp4', type: 'video', span: 'span-half', hasAudio: true }
+            ]
+          },
+          {
+            title: 'Reactions',
+            media: [
+              { src: 'assets/img/doodi_reaction_1.mp4', type: 'video', span: 'span-third' },
+              { src: 'assets/img/doodi_reaction_2.mp4', type: 'video', span: 'span-third' },
+              { src: 'assets/img/doodi_reaction_3.mp4', type: 'video', span: 'span-third' },
+              { src: 'assets/img/doodi_reaction_4.mp4', type: 'video', span: 'span-third' },
+              { src: 'assets/img/doodi_reaction_5.mp4', type: 'video', span: 'span-third' },
+              { src: 'assets/img/doodi_reaction_6.mp4', type: 'video', span: 'span-third' }
+            ]
+          },
+          {
+            title: 'Content',
+            media: [
+              { src: 'assets/img/doodi_animation_3.mp4', type: 'video', span: 'span-third', hasAudio: true },
+              { src: 'assets/img/doodi_animation_3_makingof.mp4', type: 'video', span: 'span-third', hasAudio: true },
+              { src: 'assets/img/doodi_animation_2.mp4', type: 'video', span: 'span-third', hasAudio: true }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'candle', name: 'Candle', type: 'Motion Design \u00b7 Social Content \u00b7 Video',
+        desc: 'Motion design and video content for Candle.',
+        role: 'Agency: Ninety Eight',
+        cover: 'assets/img/candle_cover.mp4',
+        media: [
+          { src: 'assets/img/candle_6.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/candle_2.mp4', type: 'video', span: 'span-third' },
+          { src: 'assets/img/candle_1.mp4', type: 'video', span: 'span-third' },
+          { src: 'assets/img/candle_3.mp4', type: 'video', span: 'span-third' },
+          { src: 'assets/img/candle_5.mp4', type: 'video', span: 'span-third' },
+          { src: 'assets/img/candle_7.mp4', type: 'video', span: 'span-third' },
+          { src: 'assets/img/candle_8.mp4', type: 'video', span: 'span-third' }
+        ]
+      },
+      {
+        id: 'plano-b', name: 'Plano B', type: 'Branding \u00b7 Visual Identity \u00b7 Motion',
+        desc: 'Complete branding and visual identity development for Plano B.',
+        role: 'Freelance',
+        cover: 'assets/img/planob_cover.mp4',
+        media: [
+          { src: 'assets/img/planob_2.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/planob_1.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/planob_4.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/planob_3.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/planob_5.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/planob_6.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/planob_11.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/planob_8.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/planob_7.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/planob_9.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/planob_10.png', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'neiro', name: 'Neiro', type: '2D Animation \u00b7 Illustration \u00b7 Crypto',
+        desc: '2D animation and video production for $NEIRO memecoin.',
+        role: 'Agency: Ninety Eight',
+        cover: 'assets/img/neiro_cover.mp4',
+        media: [
+          { src: 'assets/img/neiro_1.mp4', type: 'video', span: 'span-full', hasAudio: true },
+          { src: 'assets/img/neiro_2.mp4', type: 'video', span: 'span-third' },
+          { src: 'assets/img/neiro_3.mp4', type: 'video', span: 'span-narrow' },
+          { src: 'assets/img/neiro_4.mp4', type: 'video', span: 'span-narrow' }
+        ]
+      },
+      {
+        id: 'black-duck', name: 'Black Duck Crossfit', type: 'Branding \u00b7 Visual Identity \u00b7 Motion',
+        desc: 'Bold branding and visual identity for Black Duck Crossfit.',
+        role: 'Freelance',
+        cover: 'assets/img/bdc_cover.mp4',
+        media: [
+          { src: 'assets/img/bdc_1.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_2.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_4.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_6.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_12.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_7.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_9.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_10.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bdc_11.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bdc_5.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bdc_3.png', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'orica', name: 'Orica', type: 'Video \u00b7 Motion \u00b7 Trailer',
+        desc: 'Trailer production and motion design for Orica.',
+        role: 'Agency: Ninety Eight',
+        cover: 'assets/img/orica_cover.mp4',
+        media: [
+          { src: 'assets/img/orica_1.mp4', type: 'video', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'qace', name: 'QACE Dynamics', type: 'Logo Design \u00b7 Branding \u00b7 Crypto',
+        desc: 'Logo design and brand identity development for QACE Dynamics.',
+        role: 'Agency: Ninety Eight',
+        cover: 'assets/img/qace_cover.jpg',
+        media: [
+          { src: 'assets/img/qace_1.jpg', type: 'img', span: 'span-full' },
+          { src: 'assets/img/qace_10.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_2.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_3.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_4.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_5.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_6.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_7.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_8.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/qace_9.jpg', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'wolf', name: 'Wolf', type: 'Illustration \u00b7 Branding \u00b7 Crypto',
+        desc: 'Visual identity and illustration work for Wolf memecoin project.',
+        role: 'Freelance',
+        cover: 'assets/img/wolf-cover.jpg',
+        media: [
+          { src: 'assets/img/wolf-5-full.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/wolf-2-full.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/wolf-3-full.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/wolf-4-full.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/wolf-1-full.png', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'mong', name: 'Mong', type: 'Animation \u00b7 Illustration \u00b7 Crypto',
+        desc: '2D animation and video production for $MONG memecoin.',
+        role: 'Freelance',
+        cover: 'assets/img/mong-cover.mp4',
+        media: [
+          { src: 'assets/img/mong-1-full.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/mong-2-full.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/mong-3-full.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/mong-4-half.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/mong-5-half.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/mong-6-half.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/mong-7-half.jpg', type: 'img', span: 'span-half' }
+        ]
+      },
+      {
+        id: 'cosmopolitan', name: 'Cosmopolitan', type: 'Social Media \u00b7 Art Direction \u00b7 Motion Design',
+        desc: 'Social media art direction and content creation for Cosmopolitan events.',
+        role: 'Agency: Studio Astronauta',
+        cover: 'assets/img/cosmo_cover.png',
+        media: [
+          { src: 'assets/img/cosmo_1.gif', type: 'img', span: 'span-full' },
+          { src: 'assets/img/cosmo_2.gif', type: 'img', span: 'span-full' },
+          { src: 'assets/img/cosmo_3.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/cosmo_4.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/cosmo_5.gif', type: 'img', span: 'span-full' },
+          { src: 'assets/img/cosmo_6.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/cosmo_7.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/cosmo_8.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/cosmo_9.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/cosmo_10.mp4', type: 'video', span: 'span-half' }
+        ]
+      },
+      {
+        id: 'brett', name: 'BRETT', type: '2D Animation \u00b7 Creative Concept \u00b7 Illustration \u00b7 Crypto',
+        desc: 'Creative concepts and design work for $BRETT across multiple campaigns.',
+        role: 'Freelance',
+        cover: 'assets/img/brett_cover.mp4',
+        categories: [
+          {
+            title: 'Brett x UEFA',
+            media: [
+              { src: 'assets/img/brett_uefa_1.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/brett_uefa_2.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/brett_uefa_5.mp4', type: 'video', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Brett Space',
+            media: [
+              { src: 'assets/img/brett_space_1.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/brett_space_2.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/brett_space_3.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/brett_space_4.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Brett x Lee Dahye',
+            media: [
+              { src: 'assets/img/brett_celeb_1.png', type: 'img', span: 'span-half' },
+              { src: 'assets/img/brett_celeb_2.png', type: 'img', span: 'span-half' }
+            ]
+          },
+          {
+            title: 'General',
+            media: [
+              { src: 'assets/img/brett_general_1.mp4', type: 'video', span: 'span-narrow' },
+              { src: 'assets/img/brett_general_2.png', type: 'img', span: 'span-narrow' },
+              { src: 'assets/img/brett_general_3.png', type: 'img', span: 'span-narrow' },
+              { src: 'assets/img/brett_general_4.mp4', type: 'video', span: 'span-narrow' },
+              { src: 'assets/img/brett_general_5.png', type: 'img', span: 'span-third' },
+              { src: 'assets/img/brett_general_6.png', type: 'img', span: 'span-third' },
+              { src: 'assets/img/brett_general_9.png', type: 'img', span: 'span-half' },
+              { src: 'assets/img/brett_general_8.jpg', type: 'img', span: 'span-half' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'veneza', name: 'Veneza', type: 'Branding \u00b7 Visual Identity',
+        desc: 'Brand identity and visual system for Veneza.',
+        role: '',
+        cover: 'assets/img/veneza_cover.png',
+        media: [
+          { src: 'assets/img/veneza_4.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/veneza_3.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/veneza_2.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/veneza_1.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/veneza_6.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/veneza_5.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/veneza_7.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/veneza_9.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/veneza_8.mp4', type: 'video', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'blockwise', name: 'Blockwise', type: 'Logo Design \u00b7 Branding \u00b7 Crypto',
+        desc: 'Branding design for a crypto project.',
+        role: 'Freelance',
+        cover: 'assets/img/blockwise_cover.png',
+        media: [
+          { src: 'assets/img/blockwise_1.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/blockwise_2.png', type: 'img', span: 'span-wide' },
+          { src: 'assets/img/blockwise_3.png', type: 'img', span: 'span-third' },
+          { src: 'assets/img/blockwise_4.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/blockwise_5.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/blockwise_8.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/blockwise_6.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/blockwise_7.png', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'bula', name: 'Bula', type: 'Branding',
+        desc: 'Branding design for Bula, an agency focused on helping children with rare diseases to raise money.',
+        role: 'Freelance',
+        cover: 'assets/img/bula_cover.jpg',
+        media: [
+          { src: 'assets/img/bula_1.mp4', type: 'video', span: 'span-full', hasAudio: true },
+          { src: 'assets/img/bula_2.jpg', type: 'img', span: 'span-full' },
+          { src: 'assets/img/bula_3.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bula_4.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bula_5.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bula_6.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bula_7.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bula_8.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/bula_9.jpg', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'bezzi', name: 'Gustavo Bezzi', type: 'Motion Design \u00b7 Video',
+        desc: 'Motion design and video content for Gustavo Bezzi.',
+        role: 'Freelance',
+        cover: 'assets/img/bezzi_cover.mp4',
+        media: [
+          { src: 'assets/img/bezzi_1.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/bezzi_2.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/bezzi_3.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/bezzi_4.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/bezzi_5.mp4', type: 'video', span: 'span-half' },
+          { src: 'assets/img/bezzi_6.mp4', type: 'video', span: 'span-half' }
+        ]
+      },
+      {
+        id: 'doshadeng', name: 'Dosha-Deng', type: 'Illustration',
+        desc: 'Illustration I did using the model Dosha Deng as a reference.',
+        role: 'Personal Project',
+        cover: 'assets/img/doshadeng_cover.jpg',
+        media: [
+          { src: 'assets/img/doshadeng_1.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/doshadeng_2.mp4', type: 'video', span: 'span-half' }
+        ]
+      },
+      {
+        id: 'insideofme', name: 'Inside of Me', type: 'Illustration \u00b7 Animation',
+        desc: 'Personal illustration and animation project.',
+        role: 'Personal Project',
+        cover: 'assets/img/insideofme_cover.webp',
+        media: [
+          { src: 'assets/img/insideofme_1.webp', type: 'img', span: 'span-half' },
+          { src: 'assets/img/insideofme_2.mp4', type: 'video', span: 'span-half' }
+        ]
+      },
+      {
+        id: 'masedo', name: 'Masedo Japanese Graffiti', type: 'Illustration \u00b7 Design',
+        desc: 'Japanese graffiti-inspired illustration and design for a japanese restaurant called Masedo.',
+        role: 'Agency: Studio Astronauta',
+        cover: 'assets/img/masedo_cover.png',
+        media: [
+          { src: 'assets/img/masedo_1.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/masedo_5.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/masedo_3.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/masedo_6.mp4', type: 'video', span: 'span-full' },
+          { src: 'assets/img/masedo_2.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/masedo_4.png', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'natur', name: 'Natur', type: 'Illustration',
+        desc: 'Vector illustrations for Natur.',
+        role: '',
+        cover: 'assets/img/natur_cover.jpg',
+        media: [
+          { src: 'assets/img/natur_1.jpg', type: 'img', span: 'span-full' },
+          { src: 'assets/img/natur_2.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/natur_3.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/natur_4.jpg', type: 'img', span: 'span-third' },
+          { src: 'assets/img/natur_5.jpg', type: 'img', span: 'span-third' },
+          { src: 'assets/img/natur_6.jpg', type: 'img', span: 'span-third' }
+        ]
+      },
+      {
+        id: 'pikachu', name: 'Pikachu Bodybuilder', type: 'Illustration',
+        desc: 'Illustration of a bodybuilder Pikachu.',
+        role: 'Personal Project',
+        cover: 'assets/img/pikachu_cover.jpg',
+        media: [
+          { src: 'assets/img/pikachu_1.png', type: 'img', span: 'span-full' },
+          { src: 'assets/img/pikachu_2.png', type: 'img', span: 'span-half' },
+          { src: 'assets/img/pikachu_3.png', type: 'img', span: 'span-half' }
+        ]
+      },
+      {
+        id: 'retiredrobots', name: 'Retired Robots', type: 'Illustration',
+        desc: 'Illustration made to celebrate Daft Punk legacy and to imagine, if they are now retired what a better place to be than in Cara\u00EDva - Brazil having a cold beer by the beach.',
+        role: 'Personal Project',
+        cover: 'assets/img/retiredrobots_cover.jpg',
+        media: [
+          { src: 'assets/img/retiredrobots_1.jpg', type: 'img', span: 'span-half' },
+          { src: 'assets/img/retiredrobots_2.mp4', type: 'video', span: 'span-half' }
+        ]
+      },
+      {
+        id: 'astronaut-mural', name: 'Studio Astronauta Mural', type: 'Illustration · Mural',
+        desc: 'Astronaut mural illustration project.',
+        role: 'Studio Astronauta',
+        cover: 'assets/img/astronaut_cover.jpg',
+        media: [
+          { src: 'assets/img/astronaut_1.jpg', type: 'img', span: 'span-full' },
+          { src: 'assets/img/astronaut_2.jpg', type: 'img', span: 'span-full' },
+          { src: 'assets/img/astronaut_3.mp4', type: 'video', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'lil-chano', name: 'Lil Chano From 79th', type: 'Illustration',
+        desc: 'Illustration tribute to Chance the Rapper.',
+        role: 'Personal Project',
+        cover: 'assets/img/lilchano_cover.jpg',
+        media: [
+          { src: 'assets/img/lilchano_1.jpg', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'downyariel', name: 'Downy & Ariel', type: 'Art Direction \u00b7 Photography \u00b7 Motion',
+        desc: 'Art direction, photography and content creation for P&G\'s Downy and Ariel brands.',
+        role: 'Agency: New Vegas \u00b7 Client: P&G',
+        cover: 'assets/img/da_cover.png',
+        categories: [
+          {
+            title: 'Shooting',
+            media: [
+              { src: 'assets/img/da_shooting_1.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/da_shooting_2.webp', type: 'img', span: 'span-full' },
+              { src: 'assets/img/da_shooting_3.webp', type: 'img', span: 'span-full' },
+              { src: 'assets/img/da_shooting_4.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/da_shooting_5.webp', type: 'img', span: 'span-full' },
+              { src: 'assets/img/da_shooting_6a.mp4', type: 'video', span: 'span-half' },
+              { src: 'assets/img/da_shooting_6b.mp4', type: 'video', span: 'span-half' },
+              { src: 'assets/img/da_shooting_6c.mp4', type: 'video', span: 'span-half' },
+              { src: 'assets/img/da_shooting_6d.mp4', type: 'video', span: 'span-half' }
+            ]
+          },
+          {
+            title: 'Downy — Content',
+            media: [
+              { src: 'assets/img/da_downy_1.png', type: 'img', span: 'span-full' },
+              { src: 'assets/img/da_downy_2.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/da_downy_3.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/da_downy_4.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Ariel — Content',
+            media: [
+              { src: 'assets/img/da_ariel_1.mp4', type: 'video', span: 'span-full' },
+              { src: 'assets/img/da_ariel_2.mp4', type: 'video', span: 'span-full' }
+            ]
+          }
+        ]
+      },
+      {
+        id: 'ui-ux-design', name: 'UI/UX Design', type: 'UI Design · Landing Pages · Web Concepts',
+        desc: 'Collection of UI/UX design explorations — landing pages, bento grids and web interface concepts.',
+        role: 'Personal Project · UI Study',
+        cover: 'assets/img/uiux-thumb.png',
+        categories: [
+          {
+            title: 'Salesforce',
+            media: [
+              { src: 'assets/img/ui-salesforce.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Nubank',
+            media: [
+              { src: 'assets/img/ui-nubank-1.png', type: 'img', span: 'span-full' },
+              { src: 'assets/img/ui-nubank-2.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Chargebee',
+            media: [
+              { src: 'assets/img/ui-chargebee.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'nCino',
+            media: [
+              { src: 'assets/img/ui-ncino-1.png', type: 'img', span: 'span-full' },
+              { src: 'assets/img/ui-ncino-2.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Galaxy',
+            media: [
+              { src: 'assets/img/ui-galaxy.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Zapeo',
+            media: [
+              { src: 'assets/img/ui-zapeo.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Bento Grid 1',
+            media: [
+              { src: 'assets/img/ui-bento2.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Bento Grid 2',
+            media: [
+              { src: 'assets/img/ui-bento1.png', type: 'img', span: 'span-full' }
+            ]
+          }
+        ]
+      }
+    ];
+
+    // ===== WEBP HELPER =====
+    function createWebpImg(src, alt) {
+      var dot = src.lastIndexOf('.');
+      var pic = document.createElement('picture');
+      if (dot !== -1) {
+        var source = document.createElement('source');
+        source.srcset = src.substring(0, dot) + '.webp';
+        source.type = 'image/webp';
+        pic.appendChild(source);
+      }
+      var img = document.createElement('img');
+      img.src = src;
+      img.alt = alt;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      pic.appendChild(img);
+      return pic;
+    }
+
+    // ===== GET PROJECT ID =====
+    var params = new URLSearchParams(window.location.search);
+    var projectId = params.get('id');
+    var projectIndex = projects.findIndex(function(p) { return p.id === projectId; });
+
+    if (projectIndex === -1) {
+      var notFoundLang = localStorage.getItem('lang') || 'en';
+      document.getElementById('projectTitle').textContent = notFoundLang === 'pt' ? 'Projeto n\u00E3o encontrado' : 'Project not found';
+      document.getElementById('projectType').textContent = '';
+      document.getElementById('projectDesc').textContent = notFoundLang === 'pt' ? 'O projeto solicitado n\u00E3o existe.' : 'The requested project does not exist.';
+      document.getElementById('projectRole').textContent = '';
+      return;
+    }
+
+    var project = projects[projectIndex];
+
+    // ===== DYNAMIC CANONICAL URL =====
+    var canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (canonicalEl) canonicalEl.href = 'https://www.lucasvfa.com.br/project.html?id=' + projectId;
+
+    // ===== SET PAGE TITLE & OG META =====
+    document.title = project.name + ' \u2014 Lucas Vaz';
+    var ogTitle = document.querySelector('meta[property="og:title"]');
+    var ogDesc = document.querySelector('meta[property="og:description"]');
+    var ogImg = document.querySelector('meta[property="og:image"]');
+    if (ogTitle) ogTitle.content = project.name + ' \u2014 Lucas Vaz Portfolio';
+    if (ogDesc) ogDesc.content = project.desc;
+    if (ogImg) ogImg.content = 'https://www.lucasvfa.com.br/' + (project.cover || 'assets/img/cover.jpg');
+
+    // ===== RENDER HERO =====
+    document.getElementById('projectTitle').textContent = project.name;
+    document.getElementById('projectType').textContent = project.type;
+    document.getElementById('projectDesc').textContent = project.desc;
+    document.getElementById('projectRole').textContent = project.role || '';
+
+    // ===== HERO BACKGROUND =====
+    var heroEl = document.getElementById('hero');
+    var heroBg = document.createElement('div');
+    heroBg.className = 'project-hero-bg';
+    var heroSrc = project.hero || project.cover;
+    if (heroSrc && (heroSrc.endsWith('.mp4') || heroSrc.endsWith('.webm'))) {
+      var heroVid = document.createElement('video');
+      heroVid.src = heroSrc;
+      heroVid.muted = true;
+      heroVid.autoplay = true;
+      heroVid.loop = true;
+      heroVid.playsInline = true;
+      heroBg.appendChild(heroVid);
+    } else if (heroSrc) {
+      var dot = heroSrc.lastIndexOf('.');
+      var webpHero = dot !== -1 ? heroSrc.substring(0, dot) + '.webp' : null;
+      if (webpHero) {
+        heroBg.style.backgroundImage = 'url("' + webpHero + '"), url("' + heroSrc + '")';
+      } else {
+        heroBg.style.backgroundImage = 'url("' + heroSrc + '")';
+      }
+    }
+    heroEl.insertBefore(heroBg, heroEl.firstChild);
+
+    // ===== YOUTUBE EMBED HELPER =====
+    function createYouTubeEmbed(ytId) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'yt-embed';
+      var poster = document.createElement('img');
+      poster.className = 'yt-poster';
+      poster.src = 'https://img.youtube.com/vi/' + ytId + '/maxresdefault.jpg';
+      poster.alt = '';
+      poster.loading = 'lazy';
+      var playBtn = document.createElement('div');
+      playBtn.className = 'yt-play';
+      playBtn.innerHTML = '<svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21"/></svg>';
+      wrapper.appendChild(poster);
+      wrapper.appendChild(playBtn);
+      wrapper.addEventListener('click', function() {
+        var iframe = document.createElement('iframe');
+        iframe.src = 'https://www.youtube.com/embed/' + ytId + '?autoplay=1&rel=0&modestbranding=1';
+        iframe.setAttribute('allow', 'autoplay; encrypted-media');
+        iframe.allowFullscreen = true;
+        iframe.title = 'YouTube video player';
+        iframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
+        wrapper.innerHTML = '';
+        wrapper.appendChild(iframe);
+      });
+      return wrapper;
+    }
+
+    // ===== RENDER MEDIA GRID =====
+    var grid = document.getElementById('mediaGrid');
+
+    if (project.categories) {
+      // Categorized project (Brett, Doodi)
+      project.categories.forEach(function(cat) {
+        var section = document.createElement('div');
+        section.className = 'category-section reveal';
+
+        var title = document.createElement('h2');
+        title.className = 'category-title';
+        title.textContent = cat.title;
+        section.appendChild(title);
+
+        var catGrid = document.createElement('div');
+        catGrid.className = cat.layout === 'reaction-row' ? 'reaction-row' : 'category-grid';
+
+        cat.media.forEach(function(item, idx) {
+          var div = document.createElement('div');
+          div.className = 'media-item ' + item.span;
+          if (item.hasAudio) div.classList.add('has-audio');
+          div.setAttribute('tabindex', '0');
+          div.setAttribute('role', 'button');
+          if (item.youtube) {
+            div.appendChild(createYouTubeEmbed(item.youtube));
+          } else if (item.type === 'video') {
+            var catVid = document.createElement('video');
+            catVid.dataset.src = item.src;
+            catVid.muted = true;
+            catVid.loop = true;
+            catVid.playsInline = true;
+            catVid.controls = true;
+            div.appendChild(catVid);
+          } else {
+            div.appendChild(createWebpImg(item.src, project.name + ' - image ' + (idx + 1)));
+          }
+          if (!item.youtube) {
+            div.addEventListener('click', function() { openLightboxWithNav(item); });
+            div.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); div.click(); } });
+          }
+          catGrid.appendChild(div);
+        });
+
+        section.appendChild(catGrid);
+        grid.appendChild(section);
+      });
+    } else if (project.media) {
+      // Regular flat media array
+      project.media.forEach(function(item, i) {
+        var div = document.createElement('div');
+        div.className = 'media-item ' + item.span + ' reveal';
+        if (item.hasAudio) div.classList.add('has-audio');
+        div.style.transitionDelay = (i % 4) * 0.08 + 's';
+        div.dataset.index = i;
+        div.setAttribute('tabindex', '0');
+        div.setAttribute('role', 'button');
+
+        if (item.youtube) {
+          div.appendChild(createYouTubeEmbed(item.youtube));
+        } else if (item.type === 'video') {
+          var mediaVid = document.createElement('video');
+          mediaVid.dataset.src = item.src;
+          mediaVid.muted = true;
+          mediaVid.loop = true;
+          mediaVid.playsInline = true;
+          mediaVid.controls = true;
+          div.appendChild(mediaVid);
+        } else {
+          div.appendChild(createWebpImg(item.src, project.name + ' - image ' + (i + 1)));
+        }
+
+        if (!item.youtube) {
+          div.addEventListener('click', function() { openLightboxWithNav(item); });
+          div.addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); div.click(); } });
+        }
+        grid.appendChild(div);
+      });
+    }
+
+    // CSS Grid handles layout — no JS masonry needed
+
+    // ===== LIGHTBOX =====
+    var lightbox = document.getElementById('lightbox');
+    var lightboxContent = document.getElementById('lightboxContent');
+    var lightboxCloseBtn = document.getElementById('lightboxClose');
+    var lastFocusedElement = null;
+
+    function openLightbox(item) {
+      lightboxContent.innerHTML = '';
+      var lbEl;
+      if (item.youtube) {
+        lbEl = document.createElement('iframe');
+        lbEl.src = 'https://www.youtube.com/embed/' + item.youtube + '?autoplay=1&rel=0&modestbranding=1';
+        lbEl.setAttribute('allow', 'autoplay; encrypted-media');
+        lbEl.allowFullscreen = true;
+        lbEl.title = 'YouTube video player';
+        lbEl.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-presentation');
+      } else if (item.type === 'video') {
+        lbEl = document.createElement('video');
+        lbEl.src = item.src;
+        lbEl.controls = true;
+        lbEl.loop = true;
+      } else {
+        lbEl = document.createElement('img');
+        lbEl.src = item.src;
+        lbEl.alt = project.name;
+      }
+      lightboxContent.appendChild(lbEl);
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      lastFocusedElement = document.activeElement;
+      lightboxCloseBtn.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      if (lastFocusedElement) lastFocusedElement.focus();
+      var vid = lightboxContent.querySelector('video');
+      if (vid) vid.pause();
+      setTimeout(function() { lightboxContent.innerHTML = ''; }, 350);
+    }
+
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+    var allMediaItems = [];
+    var currentLightboxIndex = -1;
+
+    function collectMediaItems() {
+      allMediaItems = [];
+      document.querySelectorAll('.media-item').forEach(function(el) {
+        var img = el.querySelector('img');
+        var vid = el.querySelector('video');
+        if (img) allMediaItems.push({ src: img.src, type: 'img' });
+        else if (vid) allMediaItems.push({ src: vid.dataset.src || vid.src, type: 'video' });
+      });
+    }
+
+    function openLightboxWithNav(item) {
+      collectMediaItems();
+      currentLightboxIndex = allMediaItems.findIndex(function(m) { return m.src.includes(item.src); });
+      openLightbox(item);
+    }
+
+    function showLightboxIndex(idx) {
+      if (idx < 0) idx = allMediaItems.length - 1;
+      if (idx >= allMediaItems.length) idx = 0;
+      currentLightboxIndex = idx;
+      var item = allMediaItems[idx];
+      openLightbox(item);
+    }
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'ArrowRight' || e.key === 'ArrowDown') { e.preventDefault(); showLightboxIndex(currentLightboxIndex + 1); }
+      if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') { e.preventDefault(); showLightboxIndex(currentLightboxIndex - 1); }
+    });
+
+    // Focus trap for lightbox
+    lightbox.addEventListener('keydown', function(e) {
+      if (e.key !== 'Tab') return;
+      var focusable = lightbox.querySelectorAll('button, [href], video, [tabindex]:not([tabindex="-1"])');
+      if (focusable.length === 0) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey) {
+        if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+      } else {
+        if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+      }
+    });
+
+    // ===== PREV / NEXT NAVIGATION (follows homepage order) =====
+    var homepageOrder = [
+      'gillette', 'downyariel', 'neiro', 'plano-b', 'brett',
+      'gillette-venus', 'qace', 'wolf', 'mong', 'ketel-one', 'doodi', 'cosmopolitan',
+      'black-duck', 'veneza', 'orica', 'candle', 'blockwise',
+      'bezzi', 'masedo', 'bula', 'natur',
+      'doshadeng', 'insideofme', 'pikachu', 'retiredrobots',
+      'astronaut-mural', 'lil-chano', 'ui-ux-design'
+    ];
+    var nav = document.getElementById('projectNav');
+    var orderIndex = homepageOrder.indexOf(projectId);
+    if (orderIndex === -1) orderIndex = projectIndex;
+    var prevId = orderIndex > 0 ? homepageOrder[orderIndex - 1] : homepageOrder[homepageOrder.length - 1];
+    var nextId = orderIndex < homepageOrder.length - 1 ? homepageOrder[orderIndex + 1] : homepageOrder[0];
+    var prevProject = projects.find(function(p) { return p.id === prevId; }) || projects[0];
+    var nextProject = projects.find(function(p) { return p.id === nextId; }) || projects[0];
+
+    nav.innerHTML =
+      '<a href="project.html?id=' + prevProject.id + '">' +
+        '<span class="nav-label" data-i18n="nav.prev">\u2190 Previous</span>' +
+        '<span class="nav-name">' + prevProject.name + '</span>' +
+      '</a>' +
+      '<a href="project.html?id=' + nextProject.id + '" style="text-align:right;">' +
+        '<span class="nav-label" data-i18n="nav.next">Next \u2192</span>' +
+        '<span class="nav-name">' + nextProject.name + '</span>' +
+      '</a>';
+
+    // ===== LENIS SMOOTH SCROLL =====
+    var lenis = new Lenis({
+      duration: 1.2,
+      easing: function(t) { return Math.min(1, 1.001 - Math.pow(2, -10 * t)); },
+      orientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.3,
+      touchMultiplier: 1.8
+    });
+
+    var lenisRafId;
+    function raf(time) {
+      lenis.raf(time);
+      lenisRafId = requestAnimationFrame(raf);
+    }
+    lenisRafId = requestAnimationFrame(raf);
+    window.addEventListener('beforeunload', function() {
+      cancelAnimationFrame(lenisRafId);
+    });
+
+    // ===== PARALLAX =====
+    var heroTitle = document.getElementById('projectTitle');
+    var heroType = document.getElementById('projectType');
+    var heroDesc = document.getElementById('projectDesc');
+
+
+    function applyParallax(scrollY) {
+      // Hero elements move at different speeds for depth
+      if (heroTitle) heroTitle.style.transform = 'translateY(' + (-scrollY * 0.35) + 'px)';
+      if (heroType) heroType.style.transform = 'translateY(' + (-scrollY * 0.25) + 'px)';
+      if (heroDesc) heroDesc.style.transform = 'translateY(' + (-scrollY * 0.18) + 'px)';
+
+      // Media items parallax removed — conflicts with masonry positioning
+    }
+
+    lenis.on('scroll', function(e) { applyParallax(e.scroll); });
+
+    // ===== SCROLL REVEAL =====
+    var revealEls = document.querySelectorAll('.reveal');
+    var revealObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(function(el) { revealObs.observe(el); });
+
+    // ===== VIDEO LAZY LOAD + VIEWPORT PLAY/PAUSE =====
+    var prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var previewVideos = document.querySelectorAll('.media-grid video');
+    var vidObs = new IntersectionObserver(function(entries) {
+      entries.forEach(function(e) {
+        var vid = e.target;
+        if (e.isIntersecting) {
+          if (!vid.src && vid.dataset.src) {
+            vid.src = vid.dataset.src;
+          }
+          if (!prefersReducedMotion) {
+            vid.play().catch(function() {});
+          }
+        } else {
+          vid.pause();
+        }
+      });
+    }, { threshold: 0.3 });
+    previewVideos.forEach(function(v) { vidObs.observe(v); });
+
+    // ===== BACK TO TOP =====
+    var backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', function() {
+        lenis.scrollTo(0, { duration: 1.5 });
+      });
+    }
+
+  })();
+  </script>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition" id="pageTransition"></div>
+  <script>
+  (function() {
+    var overlay = document.getElementById('pageTransition');
+
+    // CSS animation handles fade-out automatically; this handles bfcache
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) {
+        overlay.style.animation = 'none';
+        overlay.offsetHeight;
+        overlay.style.animation = '';
+      }
+    });
+
+    // Intercept internal links
+    document.addEventListener('click', function(e) {
+      var link = e.target.closest('a[href]');
+      if (!link) return;
+      var href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http') || link.target === '_blank') return;
+      e.preventDefault();
+      // Clear saved scroll for all explicit nav (prevents landing at wrong position)
+      sessionStorage.removeItem('indexScrollY');
+      overlay.classList.add('in');
+      setTimeout(function() { window.location.href = href; }, 300);
+    });
+  })();
+  </script>
+  <script>
+  (function() {
+    // Set lang immediately from localStorage before timeout
+    var earlyLang = localStorage.getItem('lang') || 'en';
+    document.documentElement.lang = earlyLang === 'pt' ? 'pt-BR' : 'en';
+
+    var i18n = {
+      en: {
+        'nav.work': 'Work',
+        'nav.personal': 'Illustrations',
+        'nav.about': 'About',
+        'nav.contact': 'Contact',
+        'nav.prev': '\u2190 Previous',
+        'nav.next': 'Next \u2192',
+        'nav.back': '\u2190 Back to Portfolio',
+        'nav.home': 'Home'
+      },
+      pt: {
+        'nav.work': 'Trabalhos',
+        'nav.personal': 'Ilustra\u00E7\u00F5es',
+        'nav.about': 'Sobre',
+        'nav.contact': 'Contato',
+        'nav.prev': '\u2190 Anterior',
+        'nav.next': 'Pr\u00F3ximo \u2192',
+        'nav.back': '\u2190 Voltar ao Portf\u00F3lio',
+        'nav.home': 'In\u00EDcio'
+      }
+    };
+
+    var projectI18n = {
+      'gillette': {
+        desc: 'Dire\u00E7\u00E3o de arte e cria\u00E7\u00E3o de conte\u00FAdo digital para as redes sociais da Gillette no Brasil.',
+        type: 'Dire\u00E7\u00E3o de Arte \u00b7 Redes Sociais \u00b7 Motion Design',
+        role: 'Ag\u00EAncia: New Vegas \u00b7 Cliente: P&G'
+      },
+      'gillette-venus': {
+        desc: 'Desenvolvimento visual e dire\u00E7\u00E3o de arte para redes sociais da Gillette Venus.',
+        type: 'Dire\u00E7\u00E3o de Arte \u00b7 Redes Sociais',
+        role: 'Ag\u00EAncia: New Vegas \u00b7 Cliente: P&G'
+      },
+      'ketel-one': {
+        desc: 'Parte da equipe criativa que lan\u00E7ou a Ketel One Botanical no digital no Brasil.',
+        type: 'Redes Sociais \u00b7 Dire\u00E7\u00E3o de Arte',
+        role: 'Ag\u00EAncia: New Vegas \u00b7 Cliente: Diageo'
+      },
+      'doodi': {
+        desc: 'Anima\u00E7\u00E3o de personagens e motion design para Doodi.',
+        type: 'Anima\u00E7\u00E3o 2D \u00b7 Ilustra\u00E7\u00E3o \u00b7 Motion',
+        role: 'Ag\u00EAncia: Ninety Eight'
+      },
+      'candle': {
+        desc: 'Motion design e conte\u00FAdo em v\u00EDdeo para Candle.',
+        type: 'Motion Design \u00b7 Conte\u00FAdo Social \u00b7 V\u00EDdeo',
+        role: 'Ag\u00EAncia: Ninety Eight'
+      },
+      'plano-b': {
+        desc: 'Desenvolvimento completo de branding e identidade visual para Plano B.',
+        type: 'Branding \u00b7 Identidade Visual \u00b7 Motion',
+        role: 'Freelance'
+      },
+      'neiro': {
+        desc: 'Anima\u00E7\u00E3o 2D e produ\u00E7\u00E3o de v\u00EDdeo para a memecoin $NEIRO.',
+        type: 'Anima\u00E7\u00E3o 2D \u00b7 Ilustra\u00E7\u00E3o \u00b7 Crypto',
+        role: 'Ag\u00EAncia: Ninety Eight'
+      },
+      'black-duck': {
+        desc: 'Branding e identidade visual para Black Duck Crossfit.',
+        type: 'Branding \u00b7 Identidade Visual \u00b7 Motion',
+        role: 'Freelance'
+      },
+      'orica': {
+        desc: 'Produ\u00E7\u00E3o de trailer e motion design para Orica.',
+        type: 'V\u00EDdeo \u00b7 Motion \u00b7 Trailer',
+        role: 'Ag\u00EAncia: Ninety Eight'
+      },
+      'qace': {
+        desc: 'Design de logo e desenvolvimento de identidade de marca para QACE Dynamics.',
+        type: 'Logo Design \u00b7 Branding \u00b7 Crypto',
+        role: 'Ag\u00EAncia: Ninety Eight'
+      },
+      'wolf': {
+        desc: 'Identidade visual e ilustra\u00E7\u00E3o para o projeto memecoin Wolf.',
+        type: 'Ilustra\u00E7\u00E3o \u00b7 Branding \u00b7 Crypto',
+        role: 'Freelance'
+      },
+      'mong': {
+        desc: 'Anima\u00E7\u00E3o 2D e produ\u00E7\u00E3o de v\u00EDdeo para a memecoin $MONG.',
+        type: 'Anima\u00E7\u00E3o \u00b7 Ilustra\u00E7\u00E3o \u00b7 Crypto',
+        role: 'Freelance'
+      },
+      'cosmopolitan': {
+        desc: 'Dire\u00E7\u00E3o de arte e cria\u00E7\u00E3o de conte\u00FAdo para eventos da Cosmopolitan.',
+        type: 'Redes Sociais \u00b7 Dire\u00E7\u00E3o de Arte \u00b7 Motion Design',
+        role: 'Ag\u00EAncia: Studio Astronauta'
+      },
+      'brett': {
+        desc: 'Conceitos criativos e design para $BRETT em m\u00FAltiplas campanhas.',
+        type: 'Anima\u00E7\u00E3o 2D \u00b7 Conceito Criativo \u00b7 Ilustra\u00E7\u00E3o \u00b7 Crypto',
+        role: 'Freelance'
+      },
+      'veneza': {
+        desc: 'Identidade de marca e sistema visual para Veneza.',
+        type: 'Branding \u00b7 Identidade Visual',
+        role: ''
+      },
+      'blockwise': {
+        desc: 'Design de branding para um projeto crypto.',
+        type: 'Logo Design \u00b7 Branding \u00b7 Crypto',
+        role: 'Freelance'
+      },
+      'bula': {
+        desc: 'Design de branding para Bula, uma ag\u00EAncia focada em ajudar crian\u00E7as com doen\u00E7as raras a arrecadar dinheiro.',
+        type: 'Branding',
+        role: 'Freelance'
+      },
+      'bezzi': {
+        desc: 'Motion design e conte\u00FAdo em v\u00EDdeo para Gustavo Bezzi.',
+        type: 'Motion Design \u00b7 V\u00EDdeo',
+        role: 'Freelance'
+      },
+      'doshadeng': {
+        desc: 'Ilustra\u00E7\u00E3o que fiz usando a modelo Dosha Deng como refer\u00EAncia.',
+        type: 'Ilustra\u00E7\u00E3o',
+        role: 'Projeto Pessoal'
+      },
+      'insideofme': {
+        desc: 'Projeto pessoal de ilustra\u00E7\u00E3o e anima\u00E7\u00E3o.',
+        type: 'Ilustra\u00E7\u00E3o \u00b7 Anima\u00E7\u00E3o',
+        role: 'Projeto Pessoal'
+      },
+      'masedo': {
+        desc: 'Ilustra\u00E7\u00E3o e design inspirados em graffiti japon\u00EAs para um restaurante japon\u00EAs chamado Masedo.',
+        type: 'Ilustra\u00E7\u00E3o \u00b7 Design',
+        role: 'Ag\u00EAncia: Studio Astronauta'
+      },
+      'natur': {
+        desc: 'Ilustra\u00E7\u00F5es vetoriais para Natur.',
+        type: 'Ilustra\u00E7\u00E3o',
+        role: ''
+      },
+      'pikachu': {
+        desc: 'Ilustra\u00E7\u00E3o de um Pikachu bodybuilder.',
+        type: 'Ilustra\u00E7\u00E3o',
+        role: 'Projeto Pessoal'
+      },
+      'retiredrobots': {
+        desc: 'Ilustra\u00E7\u00E3o feita para celebrar o legado do Daft Punk e imaginar: se eles est\u00E3o aposentados, que lugar melhor do que Cara\u00EDva - Brasil, tomando uma cerveja gelada na praia.',
+        type: 'Ilustra\u00E7\u00E3o',
+        role: 'Projeto Pessoal'
+      },
+      'astronaut-mural': {
+        desc: 'Projeto de mural ilustrado do Studio Astronauta.',
+        type: 'Ilustra\u00E7\u00E3o \u00b7 Mural',
+        role: 'Studio Astronauta'
+      },
+      'lil-chano': {
+        desc: 'Ilustra\u00E7\u00E3o homenagem ao Chance the Rapper.',
+        type: 'Ilustra\u00E7\u00E3o',
+        role: 'Projeto Pessoal'
+      },
+      'downyariel': {
+        desc: 'Dire\u00E7\u00E3o de arte, fotografia e cria\u00E7\u00E3o de conte\u00FAdo para as marcas Downy e Ariel da P&G.',
+        type: 'Dire\u00E7\u00E3o de Arte \u00b7 Fotografia \u00b7 Motion',
+        role: 'Ag\u00EAncia: New Vegas \u00b7 Cliente: P&G'
+      },
+      'ui-ux-design': {
+        desc: 'Cole\u00E7\u00E3o de explora\u00E7\u00F5es de UI/UX \u2014 landing pages, bento grids e conceitos de interface web.',
+        type: 'UI Design \u00b7 Landing Pages \u00b7 Conceitos Web',
+        role: 'Projeto Pessoal \u00b7 Estudo de UI'
+      }
+    };
+
+    function setLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(function(el) {
+        var key = el.getAttribute('data-i18n');
+        if (i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(b) {
+        var isActive = b.dataset.lang === lang;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      // Translate project hero
+      var pid = new URLSearchParams(window.location.search).get('id');
+      if (pid && lang === 'pt' && projectI18n[pid]) {
+        var t = projectI18n[pid];
+        if (t.desc) document.getElementById('projectDesc').textContent = t.desc;
+        if (t.type) document.getElementById('projectType').textContent = t.type;
+        if (t.role !== undefined) document.getElementById('projectRole').textContent = t.role;
+      } else if (pid && lang === 'en') {
+        // Re-read from the original project data stored on the elements
+        var origDesc = document.getElementById('projectDesc').getAttribute('data-orig');
+        var origType = document.getElementById('projectType').getAttribute('data-orig');
+        var origRole = document.getElementById('projectRole').getAttribute('data-orig');
+        if (origDesc) document.getElementById('projectDesc').textContent = origDesc;
+        if (origType) document.getElementById('projectType').textContent = origType;
+        if (origRole !== null) document.getElementById('projectRole').textContent = origRole;
+      }
+
+      localStorage.setItem('lang', lang);
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+    }
+
+    // Store original EN values for switching back
+    function initI18n() {
+      var desc = document.getElementById('projectDesc');
+      var type = document.getElementById('projectType');
+      var role = document.getElementById('projectRole');
+      if (desc && !desc.getAttribute('data-orig')) desc.setAttribute('data-orig', desc.textContent);
+      if (type && !type.getAttribute('data-orig')) type.setAttribute('data-orig', type.textContent);
+      if (role && !role.getAttribute('data-orig')) role.setAttribute('data-orig', role.textContent);
+
+      var savedLang = localStorage.getItem('lang') || 'en';
+      setLang(savedLang);
+    }
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initI18n);
+    } else {
+      initI18n();
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        setLang(btn.dataset.lang);
+      });
+    });
+
+    // ===== MOBILE NAV TOGGLE =====
+    var navToggleBtn = document.getElementById('navToggle');
+    var navLinksEl = document.getElementById('navLinks');
+    if (navToggleBtn && navLinksEl) {
+      var navEl = navToggleBtn.closest('.nav');
+      navToggleBtn.addEventListener('click', function() {
+        navToggleBtn.classList.toggle('active');
+        navLinksEl.classList.toggle('open');
+        if (navEl) navEl.classList.toggle('menu-open');
+        document.body.style.overflow = navLinksEl.classList.contains('open') ? 'hidden' : '';
+        var expanded = navToggleBtn.classList.contains('active');
+        navToggleBtn.setAttribute('aria-expanded', expanded ? 'true' : 'false');
+      });
+      navLinksEl.querySelectorAll('a').forEach(function(link) {
+        link.addEventListener('click', function() {
+          navToggleBtn.classList.remove('active');
+          navLinksEl.classList.remove('open');
+          if (navEl) navEl.classList.remove('menu-open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+  })();
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lucas Vaz — Graphic Designer & Illustrator</title>
+  <meta name="description" content="Portfolio of Lucas Vaz — Graphic Designer, Illustrator & 2D Animator with 19+ years of experience turning beauty into chaos.">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta property="og:title" content="Lucas Vaz — Graphic Designer & Illustrator">
+  <meta property="og:description" content="19+ years shaping visual identities and creative campaigns for global brands from P&G to Web3.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.lucasvfa.com.br/">
+  <meta property="og:image" content="https://www.lucasvfa.com.br/assets/img/cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Lucas Vaz — Graphic Designer & Illustrator">
+  <meta name="twitter:description" content="19+ years shaping visual identities and creative campaigns for global brands.">
+  <meta name="twitter:image" content="https://www.lucasvfa.com.br/assets/img/cover.jpg">
+  <meta name="theme-color" content="#000000">
+  <link rel="canonical" href="https://www.lucasvfa.com.br/">
+  <!-- CSP active on production server via headers (vercel.json / _headers / .htaccess) -->
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lucas Vaz","url":"https://www.lucasvfa.com.br","jobTitle":"Art Director, Graphic Designer & Illustrator","description":"Senior creative with 16+ years of experience in graphic design, illustration, 2D animation and art direction for global brands.","image":"https://www.lucasvfa.com.br/assets/img/hero-photo.png","knowsAbout":["Graphic Design","Illustration","Art Direction","2D Animation","Motion Design","Brand Identity","UI/UX Design"],"sameAs":["https://www.instagram.com/lucasvfa","https://www.linkedin.com/in/lucasvfa","https://x.com/lucasvfa"]}</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  <link rel="preload" href="assets/img/hero-photo.webp" as="image" type="image/webp" fetchpriority="high">
+  <link rel="preload" href="assets/img/logo-lucas-vaz-motion.mp4" as="fetch" crossorigin type="video/mp4">
+  <style>
+    /* ===== RESET & BASE ===== */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    *:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+    }
+
+    :root {
+      --bg: #000000;
+      --accent: #C42BAB;
+      --text: #FFFFFF;
+      --text-secondary: #999999;
+      --text-tertiary: #888888;
+      --surface: #222222;
+      --border: rgba(187, 187, 187, 0.2);
+      --font: 'Inter Display', 'Inter', -apple-system, sans-serif;
+      --gutter: clamp(1.5rem, 14vw, 225px);
+      --radius: 8px;
+
+      /* ═══ RESPONSIVE SYSTEM ═══
+         All responsive values are driven by these variables.
+         Each breakpoint overrides them — elements reference vars only.
+         Breakpoints (desktop-first):
+           base    = 1280+
+           1440+   = large desktop
+           1800+   = full HD
+           ≤1024   = tablet landscape
+           ≤768    = tablet portrait / mobile landscape
+           ≤480    = mobile portrait
+      */
+
+      /* Nav */
+      --nav-h: 94px;
+      --nav-pad: 1.5rem var(--gutter);
+      --scroll-offset: 94px;
+
+      /* Logo */
+      --logo-w: 367px;
+      --logo-top: 16.4vh;
+
+      /* Hire Me block */
+      --pill-w: 150px;
+      --pill-h: 44px;
+      --pill-fs: 0.6rem;
+      --icon-size: 44px;
+      --icon-svg: 20px;
+      --photo-size: 97px;
+      --tags-top: 44.1vh;
+
+      /* Bio */
+      --bio-fs: 16px;
+      --bio-lh: 24px;
+      --bio-ls: 1.82px;
+      --bio-max-w: 300px;
+      --bio-top: 70vh;
+
+      /* About */
+      --about-photo-max: 340px;
+      --about-3d-w: 230px;
+      --about-bio-fs: 0.85rem;
+      --about-skill-fs: 0.6rem;
+      --about-skill-pad: 6px 12px;
+
+      /* Contact */
+      --social-size: 72px;
+      --social-svg: 34px;
+      --contact-heading-fs: clamp(2.5rem, 5vw, 4rem);
+
+      /* Bento */
+      --bento-cols: 3;
+      --bento-pad: 0 var(--gutter) 48px;
+    }
+
+    /* ── 1440+ large desktop ── */
+    @media (min-width: 1440px) {
+      :root {
+        --logo-w: 409px;
+        --logo-top: 16.4vh;
+        --photo-size: 96px;
+        --tags-top: 44.6vh;
+        --bio-top: 72vh;
+        --about-photo-max: 402px;
+        --about-3d-w: 269px;
+      }
+    }
+
+    /* ── 1600+ ── */
+    @media (min-width: 1600px) {
+      :root {
+        --bio-top: 68.8vh;
+        --about-bio-fs: 0.95rem;
+        --about-skill-fs: 0.65rem;
+        --about-skill-pad: 6px 14px;
+        --social-size: 84px;
+        --social-svg: 40px;
+      }
+    }
+
+    /* ── 1800+ full HD ── */
+    @media (min-width: 1800px) {
+      :root {
+        --logo-w: 515px;
+        --logo-top: 14.3vh;
+        --pill-w: 190px;
+        --pill-h: 70px;
+        --pill-fs: 0.85rem;
+        --icon-size: 70px;
+        --icon-svg: 30px;
+        --photo-size: 149px;
+        --tags-top: 44.9vh;
+        --bio-fs: 24px;
+        --bio-lh: 31.5px;
+        --bio-top: 75.3vh;
+        --bio-max-w: 429px;
+        --about-photo-max: 561px;
+        --about-3d-w: 289px;
+      }
+    }
+
+    /* ── ≤1024 tablet landscape ── */
+    @media (max-width: 1024px) {
+      :root {
+        --logo-w: 292px;
+        --logo-top: 18.75vh;
+        --pill-w: 130px;
+        --pill-h: 44px;
+        --pill-fs: 0.5rem;
+        --icon-size: 44px;
+        --icon-svg: 16px;
+        --photo-size: 72px;
+        --tags-top: 43vh;
+        --bio-fs: 0.8rem;
+        --bio-lh: 22px;
+        --bio-ls: 1px;
+        --bio-top: 67vh;
+        --about-3d-w: 195px;
+        --scroll-offset: 94px;
+      }
+    }
+
+    /* ── ≤768 tablet portrait ── */
+    @media (max-width: 768px) {
+      :root {
+        --nav-h: 48px;
+        --nav-pad: 1.25rem 1.25rem;
+        --scroll-offset: 56px;
+        --logo-w: 253px;
+        --pill-h: 38px;
+        --pill-fs: 0.55rem;
+        --icon-size: 38px;
+        --icon-svg: 18px;
+        --photo-size: 78px;
+        --bio-fs: 0.6rem;
+        --bio-lh: 1.05rem;
+        --bio-ls: 0.0625rem;
+        --bio-max-w: 298px;
+        --about-bio-fs: 0.9rem;
+        --about-3d-w: 180px;
+        --bento-cols: 2;
+        --bento-pad: 0 var(--gutter) 24px;
+        --social-size: 64px;
+        --social-svg: 30px;
+        --contact-heading-fs: clamp(2rem, 6vw, 3.5rem);
+      }
+    }
+
+    /* ── ≤480 mobile portrait ── */
+    @media (max-width: 480px) {
+      :root {
+        --nav-h: 56px;
+        --nav-pad: 1.25rem 1.5rem;
+        --scroll-offset: 56px;
+        --logo-w: 42vw;
+        --pill-h: 34px;
+        --pill-fs: 0.5rem;
+        --icon-size: 34px;
+        --icon-svg: 16px;
+        --bio-fs: 0.7rem;
+        --bio-max-w: none;
+        --about-photo-max: 216px;
+        --about-bio-fs: 0.8rem;
+        --about-3d-w: 106px;
+        --bento-cols: 1;
+        --bento-pad: 0 var(--gutter) 16px;
+        --social-size: 56px;
+        --social-svg: 24px;
+        --contact-heading-fs: clamp(1.8rem, 8vw, 3rem);
+      }
+    }
+
+    /* ── 400-480 mobile adjustments ── */
+    @media (min-width: 400px) and (max-width: 480px) {
+      :root {
+        --about-photo-max: 269px;
+        --about-3d-w: 116px;
+      }
+    }
+
+    html {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+      scroll-padding-top: 5rem;
+    }
+
+    html.lenis, html.lenis body { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: var(--font);
+      font-weight: 400;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: -5px;
+      background: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+      background-size: 128px 128px;
+      opacity: 0.10;
+      pointer-events: none;
+      z-index: 9999;
+      will-change: transform;
+      backface-visibility: hidden;
+      transform: translateZ(0);
+    }
+
+    @media (max-width: 768px) {
+      body::after { opacity: 0.06; }
+    }
+
+    img, video { display: block; max-width: 100%; height: auto; }
+    a { color: inherit; text-decoration: none; }
+
+    /* ===== PAGE TRANSITIONS ===== */
+    @keyframes fadeOutOverlay { to { opacity: 0; } }
+    .page-transition {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 99999;
+      pointer-events: none;
+      opacity: 1;
+      animation: fadeOutOverlay 0.5s 0.05s forwards;
+    }
+    .page-transition.in { animation: none; opacity: 1; pointer-events: all; transition: opacity 0.3s; }
+    .page-transition.in.out { opacity: 0; }
+
+    /* ===== BACK TO TOP ===== */
+    .back-to-top-wrap {
+      display: flex;
+      justify-content: flex-end;
+      padding: 0 clamp(1.5rem, 4vw, 3rem) 2rem;
+    }
+    .back-to-top {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: transparent;
+      border: 1px solid var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+    .back-to-top:hover {
+      background: rgba(196, 43, 171, 0.12);
+      transform: translateY(-3px);
+    }
+    .back-to-top svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: var(--accent);
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    /* ===== NAVIGATION ===== */
+    .nav {
+      position: fixed; top: 0; left: 0; width: 100%; max-width: 100vw; z-index: 10000;
+      padding: var(--nav-pad);
+      min-height: var(--nav-h);
+      display: flex; justify-content: space-between; align-items: center;
+      background: rgba(19, 19, 19, 0.85);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      will-change: transform;
+      transform: translateZ(0);
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; font-weight: 500; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; }
+    .nav-links a { position: relative; transition: color 0.3s ease; text-shadow: 0 1px 8px rgba(0,0,0,0.8), 0 0 3px rgba(0,0,0,1); padding: 0.5rem 0; }
+    .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1px; background: var(--accent); transition: width 0.3s ease; }
+    .nav-links a:hover::after { width: 100%; }
+
+    /* ── Mobile nav toggle ── */
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      min-width: 44px;
+      min-height: 44px;
+      justify-content: center;
+      align-items: center;
+      z-index: 10001;
+      background: none;
+      border: none;
+    }
+    .nav-hamburger span {
+      width: 22px; height: 1.5px;
+      background: #fff;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+    .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(4.5px, 4.5px); }
+    .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+    .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(4.5px, -4.5px); }
+
+    @media (max-width: 768px) {
+      .nav-hamburger { display: flex; margin-left: 0.75rem; }
+      .nav.menu-open {
+        height: 100vh; height: 100dvh;
+        align-items: flex-start;
+        background: #000;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+      }
+      .nav.menu-open .nav-hamburger,
+      .nav.menu-open .lang-toggle {
+        top: 6px;
+        transform: none;
+      }
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        background: #000;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2.5rem;
+        font-size: 1.2rem;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { text-shadow: none; padding: 0.75rem 1rem; min-height: 44px; display: flex; align-items: center; }
+    }
+
+    /* ── Language toggle ── */
+    .lang-toggle {
+      display: flex; align-items: center; gap: 0;
+      font-size: 0.65rem; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; margin-left: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.2); border-radius: 20px;
+      overflow: hidden;
+    }
+    .lang-btn {
+      position: relative;
+      background: none; border: none; color: rgba(255,255,255,0.4);
+      padding: 0.625rem 0.75rem; min-height: 44px; cursor: pointer; transition: all 0.3s ease;
+      font-family: var(--font); font-size: 0.65rem; font-weight: 500;
+      letter-spacing: 0.1em;
+    }
+    .lang-btn.active {
+      color: #fff; background: rgba(255,255,255,0.1);
+      padding-left: 1.125rem;
+    }
+    .lang-btn.active::before {
+      content: '';
+      position: absolute;
+      left: 8px; top: 50%;
+      transform: translateY(-50%);
+      width: 5px; height: 5px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+    .lang-btn:hover { color: #fff; }
+
+    /* ===== SCROLL REVEAL ===== */
+    .reveal { opacity: 0; transform: translateY(50px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
+    .reveal-left { opacity: 0; transform: translateX(-80px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal-left.visible { opacity: 1; transform: translateX(0); }
+    .reveal-right { opacity: 0; transform: translateX(80px); transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1); }
+    .reveal-right.visible { opacity: 1; transform: translateX(0); }
+
+    /* ── OFFBIT font ── */
+    @font-face {
+      font-family: 'OFFBIT';
+      src: url('assets/fonts/OffBit-101.woff2') format('woff2'),
+           url('assets/fonts/OffBit-101.ttf') format('truetype');
+      font-weight: 101;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    /* ===== HERO ===== */
+    .hero {
+      position: relative; height: 100.25vh; min-height: 700px;
+      overflow: hidden; background: #000;
+    }
+
+    /* ── OFFBIT word layers ── */
+    .hero-word {
+      position: absolute;
+      pointer-events: none; user-select: none;
+      font-family: 'OFFBIT', monospace;
+      font-weight: 101;
+      font-size: 17vw;
+      letter-spacing: 0.1em;
+      line-height: 1;
+      color: #363636;
+      white-space: nowrap;
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-word.hero-in { opacity: 1; transform: translateY(0); }
+
+    /*
+      Positions calibrated so each word bleeds off its intended edge.
+      Character widths at 19vw (from Figma SVG viewboxes → em):
+        turning 3.291em → 62.5vw  | beauty 3.188em → 60.6vw
+        into    1.697em → 32.2vw  | chaos  2.761em → 52.5vw
+    */
+    .hero-word--turning { right: -2vw; top: 10.75vh;  top: 10.75dvh;  }
+    .hero-word--beauty  { left: 0;  top: 37vh;  top: 37dvh;  }
+    .hero-word--into    { left: 0;  top: 63.25vh;  top: 63.25dvh;  }
+    .hero-word--chaos   { right: -2vw; top: 63.25vh;  top: 63.25dvh;  }
+    .hero-word--chaos-o {
+      color: #363636;
+    }
+
+    /* ── Animated logo ── */
+    .hero-logo {
+      position: absolute;
+      left: calc(var(--gutter) - 30px); top: 17.4vh; top: 17.4dvh;
+      width: 28.7vw; max-width: 420px; min-width: 240px;
+      z-index: 3;
+      pointer-events: none;
+      opacity: 0; transform: scale(0.9);
+      transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-logo.hero-in { opacity: 1; transform: scale(1); }
+    .hero-logo video {
+      width: 100%; height: auto;
+      display: block;
+    }
+
+    /* ── Portrait photo ── */
+    .hero-photo {
+      position: absolute;
+      right: calc(var(--gutter) - 40px); top: 55vh; top: 55dvh;
+      width: 16.39vw; height: 36vh; height: 36dvh;
+      overflow: hidden;
+      perspective: 600px;
+      opacity: 0; transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-photo.hero-in { opacity: 1; transform: translateY(0); }
+    .hero-photo img {
+      position: absolute;
+      width: 137.29%; height: 100%;
+      left: -16.02%; top: 0.08%;
+      object-fit: cover; display: block;
+      filter: grayscale(100%);
+      backface-visibility: hidden;
+      transition: transform 0.3s ease, filter 0.4s ease;
+    }
+
+    /* ── Tags row (auto layout: flex, always aligned, close together) ── */
+    .hero-tags {
+      position: absolute;
+      top: 43vh; top: 43dvh;
+      transform: none;
+      left: auto;
+      right: var(--gutter);
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 8px;
+      z-index: 2;
+    }
+    /* Individual hero-tags children animate separately */
+    .hero-contact-icon,
+    .hero-hire-tag,
+    .hero-designer-tag,
+    .hero-tags-photo {
+      opacity: 0; transform: translateY(12px);
+      transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .hero-contact-icon.hero-in,
+    .hero-hire-tag.hero-in,
+    .hero-designer-tag.hero-in,
+    .hero-tags-photo.hero-in { opacity: 1; transform: translateY(0); }
+    .hero-tags-row {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-tags-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+    }
+    .hero-tags-left {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .hero-tags-photo {
+      width: var(--photo-size);
+      height: var(--photo-size);
+      overflow: hidden;
+      border-radius: var(--radius);
+      flex-shrink: 0;
+    }
+    .hero-tags-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(100%);
+      backface-visibility: hidden;
+      transition: transform 0.3s ease, filter 0.4s ease;
+    }
+
+    /* ── Contact icons (left of hire tag) ── */
+    .hero-contact-icons {
+      display: flex;
+      gap: 8px;
+      margin-right: 8px;
+    }
+    .hero-contact-icon {
+      width: var(--icon-size); height: var(--icon-size);
+      border-radius: 50%;
+      background: rgba(255,255,255,0.1);
+      border: 0.545px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer;
+      transition: background 0.3s ease, border-color 0.3s ease;
+      text-decoration: none;
+    }
+    .hero-contact-icon svg {
+      width: var(--icon-svg); height: var(--icon-svg);
+      fill: rgba(255,255,255,0.6);
+      transition: fill 0.3s ease;
+    }
+    .hero-contact-icon--whatsapp:hover {
+      background: rgba(37, 211, 102, 0.15);
+      border-color: #25d366;
+    }
+    .hero-contact-icon--whatsapp:hover svg { fill: #25d366; }
+    .hero-contact-icon--email:hover {
+      background: rgba(0, 230, 255, 0.15);
+      border-color: #00e6ff;
+    }
+    .hero-contact-icon--email:hover svg { fill: #00e6ff; }
+
+    /* ── "AVAILABLE TO HIRE" tag ── */
+    .hero-hire-tag {
+      width: var(--pill-w); height: var(--pill-h);
+      border: 0.545px solid #1fed59;
+      border-radius: 999px;
+      background: rgba(31, 237, 89, 0.08);
+      position: relative;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+    /* ── Pulsing dot ── */
+    @keyframes dot-pulse {
+      0%   { transform: scale(0.5); opacity: 1; }
+      100% { transform: scale(2.2); opacity: 0; }
+    }
+    .hero-hire-dot-wrap {
+      position: absolute; left: 14px; top: 50%;
+      transform: translateY(-50%);
+      width: 20px; height: 20px;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .hero-hire-dot-core {
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #1fed59; position: relative; z-index: 1; flex-shrink: 0;
+    }
+    .hero-hire-dot-ring {
+      position: absolute; width: 16px; height: 16px;
+      border-radius: 50%; border: 1.5px solid rgba(31, 237, 89, 0.7);
+      animation: dot-pulse 2s ease-out infinite;
+    }
+    .hero-hire-label {
+      position: absolute; left: 38px; right: 12px; top: 50%;
+      transform: translateY(-50%); text-align: center;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300; font-size: var(--pill-fs);
+      letter-spacing: 1.2px; line-height: 1;
+      color: #fff; white-space: nowrap;
+    }
+
+    /* ── Rotating professions tag ── */
+    .hero-designer-tag {
+      width: 100%; height: var(--pill-h);
+      border: 0.545px solid #c42bab;
+      border-radius: 999px;
+      overflow: hidden;
+      flex-shrink: 0;
+      position: relative;
+    }
+    .hero-designer-tag::before,
+    .hero-designer-tag::after {
+      content: '';
+      position: absolute; left: 0; right: 0;
+      height: 10px; z-index: 2; pointer-events: none;
+    }
+    .hero-designer-tag::before {
+      top: 0;
+      background: linear-gradient(to bottom, #000, transparent);
+      border-radius: 40.86px 40.86px 0 0;
+    }
+    .hero-designer-tag::after {
+      bottom: 0;
+      background: linear-gradient(to top, #000, transparent);
+      border-radius: 0 0 40.86px 40.86px;
+    }
+    .designer-text-slider {
+      display: flex;
+      flex-direction: column;
+      animation: text-roll 12.5s ease-in-out infinite;
+    }
+    .designer-text-item {
+      height: var(--pill-h);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 300; font-size: var(--pill-fs);
+      letter-spacing: 1.2px; color: #fff;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    @keyframes text-roll {
+      0%, 16%   { transform: translateY(0); }
+      20%, 36%  { transform: translateY(-16.667%); }
+      40%, 56%  { transform: translateY(-33.333%); }
+      60%, 76%  { transform: translateY(-50%); }
+      80%, 96%  { transform: translateY(-66.667%); }
+      100%      { transform: translateY(-83.333%); }
+    }
+
+    /* ── Bio text blocks ── */
+    .hero-bio-left,
+    .hero-bio-right {
+      position: absolute;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-weight: 400; font-size: var(--bio-fs);
+      letter-spacing: var(--bio-ls); line-height: var(--bio-lh);
+      color: #fff; z-index: 2;
+      opacity: 0; transform: translateY(15px);
+      transition: opacity 1s ease, transform 1s ease;
+    }
+    .hero-bio-left.hero-in,
+    .hero-bio-right.hero-in { opacity: 1; transform: translateY(0); }
+    .hero-bio-left  { top: 71.25vh; top: 71.25dvh; left: 20.3vw; }
+    .hero-bio-right { top: 71.25vh; top: 71.25dvh; left: 48.4vw; }
+    .hero-bio-left p, .hero-bio-right p { margin: 0; white-space: nowrap; }
+
+    /* ===== DIVIDER ===== */
+    .divider { width: 60px; height: 1px; background: var(--accent); margin: clamp(2.5rem, 5vw, 4.5rem) auto; display: block; }
+
+    /* ===== BENTO GRID ===== */
+    #projects {
+      position: relative;
+      z-index: 10;
+      margin-top: -60px;
+      background: #000;
+    }
+
+    .bento-grid {
+      position: relative;
+      padding: var(--bento-pad);
+    }
+
+    /* Thumbnail adjustments by data attribute */
+    [data-project="cosmopolitan"] .bento-media img { object-position: center 70%; }
+    [data-project="brett"] .bento-media img { transform: scale(1.5) translateX(5%); }
+    [data-project="brett"]:hover .bento-media img { transform: scale(1.6) translateX(5%); }
+
+    .bento-card {
+      position: absolute;
+      overflow: hidden;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+      background: #111;
+      border-radius: var(--radius);
+      opacity: 0;
+      backface-visibility: hidden;
+      contain: layout style;
+      transition: opacity 0.6s ease, transform 0.3s ease;
+    }
+
+    .bento-media {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bento-media::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0);
+      transition: background 0.4s ease;
+      z-index: 1;
+    }
+    .bento-card:hover .bento-media::after {
+      background: rgba(0, 0, 0, 0.5);
+    }
+
+    .bento-media img,
+    .bento-media video {
+      width: 100%;
+      height: auto;
+      display: block;
+      backface-visibility: hidden;
+      transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .bento-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex; align-items: center; justify-content: center;
+      opacity: 0;
+      transition: opacity 0.4s ease;
+      z-index: 3;
+      pointer-events: none;
+    }
+    .bento-card:hover .bento-overlay,
+    .illustration-card:hover .bento-overlay {
+      opacity: 1;
+    }
+    .bento-overlay-btn {
+      background: #C42BAB;
+      color: #fff;
+      font-family: var(--font);
+      font-weight: 600;
+      font-size: 0.75rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 12px 28px;
+      border-radius: 4px;
+    }
+
+    .bento-card:hover .bento-media img,
+    .bento-card:hover .bento-media video {
+      transform: scale(1.05);
+    }
+
+    .bento-card:focus-within .bento-overlay { opacity: 1; }
+    .bento-card:focus-within .bento-media img { transform: scale(1.05); }
+    .bento-card:focus-within .bento-media video { transform: scale(1.05); }
+
+    .bento-info {
+      padding: 10px 0 16px;
+      background: #000;
+      flex-shrink: 0;
+    }
+
+    .bento-info-row {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .bento-num {
+      font-family: 'OFFBIT', monospace;
+      font-weight: 101;
+      font-size: 1.1rem;
+      color: var(--accent);
+      letter-spacing: 0.1em;
+      flex-shrink: 0;
+    }
+
+    .bento-name {
+      font-family: 'Inter Display', 'Inter', sans-serif;
+      font-size: clamp(0.85rem, 1.2vw, 1.2rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin: 0;
+      color: #fff;
+    }
+
+
+
+    .bento-card--external .bento-info::after {
+      content: '↗';
+      float: right;
+      opacity: 0.4;
+      font-size: 0.9rem;
+    }
+
+    /* ===== UI/UX SECTION ===== */
+    .uiux-grid {
+      display: grid; grid-template-columns: 1fr; gap: 48px;
+    }
+    .uiux-card {
+      position: relative; overflow: hidden; border-radius: var(--radius);
+    }
+    .uiux-card img {
+      width: 100%; height: auto; display: block;
+      transition: transform 0.6s ease;
+    }
+    .uiux-card:hover img { transform: scale(1.03); }
+    .uiux-card .overlay {
+      position: absolute; inset: 0;
+      background: rgba(0,0,0,0.5); opacity: 0;
+      display: flex; align-items: center; justify-content: center;
+      transition: opacity 0.3s ease;
+    }
+    .uiux-card:hover .overlay { opacity: 1; }
+    .uiux-card:focus-within .overlay { opacity: 1; }
+    .uiux-card:focus-within img { transform: scale(1.03); }
+
+    /* ===== SECTION SHARED ===== */
+    .section { padding: clamp(9rem, 18vw, 15rem) var(--gutter); scroll-margin-top: var(--scroll-offset); }
+    #projects { scroll-margin-top: var(--scroll-offset); }
+    .contact { scroll-margin-top: var(--scroll-offset); }
+    .section-label { font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; color: var(--accent); margin-bottom: 1.5rem; }
+    .section-heading { font-size: clamp(2.5rem, 5vw, 4.5rem); font-weight: 700; line-height: 1.05; letter-spacing: -0.03em; margin-bottom: 2rem; font-family: 'Inter Display', 'Inter', sans-serif; }
+
+    /* ===== ILLUSTRATIONS ===== */
+    .illustrations-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 48px;
+      padding: 0;
+    }
+    .illustration-card {
+      position: relative; overflow: hidden; border-radius: var(--radius); aspect-ratio: 1;
+      background: var(--surface); cursor: pointer;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .illustration-card img { width: 100%; height: 100%; object-fit: cover; backface-visibility: hidden; transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); }
+    .illustration-card:hover img { transform: scale(1.05); }
+    .illustration-card .overlay {
+      position: absolute; inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+      opacity: 0; transition: opacity 0.4s ease;
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px;
+    }
+    .illustration-card:hover .overlay { opacity: 1; }
+    .illustration-card:focus-within .overlay { opacity: 1; }
+    .illustration-card:focus-within img { transform: scale(1.05); }
+    .overlay-title { font-size: 0.85rem; font-weight: 500; letter-spacing: 0.05em; }
+
+    /* ===== ABOUT ===== */
+    .about-section {
+      padding: clamp(9rem, 18vw, 15rem) var(--gutter);
+    }
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+    }
+    @media (min-width: 1200px) {
+      .about-grid { grid-template-columns: 1fr 1.4fr; align-items: start; }
+    }
+    .about-heading {
+      font-family: 'Inter Display', 'Inter', sans-serif;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      line-height: 1.1;
+      margin-bottom: 2rem;
+    }
+    .about-media {
+      position: relative;
+      width: 100%;
+      max-width: 520px;
+      overflow: visible;
+    }
+    .about-photo {
+      width: 100%;
+      max-width: var(--about-photo-max);
+      overflow: hidden;
+      border-radius: var(--radius);
+    }
+    .about-photo img, .about-photo video {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: grayscale(100%);
+      transition: filter 0.6s ease;
+    }
+    .about-photo:hover img, .about-photo:hover video { filter: grayscale(0%); }
+    .about-3d {
+      position: relative;
+      top: 1rem;
+      left: 25%;
+      width: clamp(180px, 18vw, 260px);
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 2px solid rgba(255,255,255,0.15);
+      z-index: 5;
+    }
+    .about-3d video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .about-stickers {
+      position: relative;
+      top: -1rem;
+      left: 15%;
+      z-index: 10;
+    }
+    .about-stickers img {
+      width: clamp(220px, 28vw, 380px);
+      min-width: 0;
+      height: auto;
+      display: block;
+    }
+    .about-right {
+      padding-top: 8rem;
+    }
+    @media (max-width: 1199px) {
+      .about-right { padding-top: 0; }
+    }
+    @media (min-width: 1200px) {
+      .about-photo { margin-top: 67px; }
+      .about-3d { position: absolute; top: 393px; left: 88px; width: 273px; }
+      .about-stickers { position: absolute; top: 751px; left: 0; right: auto; }
+      .about-stickers img { width: 333px; }
+      .about-media { min-height: 967px; }
+    }
+    .about-bio {
+      font-size: var(--about-bio-fs);
+      font-weight: 300;
+      line-height: 1.8;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+    }
+    .about-bio strong {
+      color: #fff;
+      font-weight: 500;
+    }
+    .about-section-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.75rem;
+      margin-top: 2rem;
+    }
+    .about-skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .about-skill {
+      font-size: var(--about-skill-fs);
+      font-weight: 400;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 10px;
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 20px;
+      color: var(--text-secondary);
+      transition: border-color 0.3s ease, color 0.3s ease;
+    }
+    .about-skill:hover {
+      border-color: var(--accent);
+      color: #fff;
+    }
+    .about-softwares {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .about-software {
+      width: 40px;
+      height: 40px;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+    .about-software img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ===== CONTACT / FOOTER ===== */
+    .contact {
+      text-align: center;
+      padding: clamp(9rem, 18vw, 15rem) var(--gutter);
+    }
+    .contact .section-label {
+      font-size: 0.75rem; letter-spacing: 0.25em;
+      display: inline-flex; align-items: center; gap: 10px;
+      margin-bottom: 2.5rem;
+    }
+    .pulse-dot {
+      position: relative;
+      width: 8px; height: 8px;
+      display: inline-flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .pulse-dot::before {
+      content: '';
+      width: 8px; height: 8px; border-radius: 50%;
+      background: #1fed59; position: relative; z-index: 1;
+    }
+    .pulse-dot::after {
+      content: '';
+      position: absolute;
+      width: 16px; height: 16px;
+      border-radius: 50%; border: 1.5px solid rgba(31, 237, 89, 0.7);
+      animation: dot-pulse 2s ease-out infinite;
+    }
+    .contact .pulse-dot {
+      width: 5px; height: 5px;
+    }
+    .contact .pulse-dot::before {
+      width: 5px; height: 5px;
+    }
+    .contact .pulse-dot::after {
+      width: 10px; height: 10px; border-width: 1px;
+    }
+    .contact-heading {
+      font-size: var(--contact-heading-fs); font-weight: 700; line-height: 0.95;
+      letter-spacing: -0.04em; margin-bottom: 2.5rem;
+      font-family: 'Inter Display', 'Inter', sans-serif;
+    }
+    .contact-heading .accent { color: var(--accent); }
+    .contact p {
+      font-size: clamp(1rem, 1.3vw, 1.15rem); color: var(--text-secondary);
+      margin-bottom: 3.5rem; max-width: 480px; margin-left: auto; margin-right: auto;
+    }
+    .contact-cta {
+      display: inline-block; padding: 1.1rem 2.8rem;
+      border: 1px solid var(--accent); color: var(--text);
+      font-family: var(--font); font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.15em; text-transform: uppercase; border-radius: 2px;
+      transition: all 0.3s ease; cursor: pointer; background: transparent;
+    }
+    .contact-cta:hover { background: var(--accent); }
+    .contact-socials { justify-content: center; margin-top: 0; gap: 18px; }
+    .contact-socials a { width: var(--social-size); height: var(--social-size); }
+    .contact-socials svg { width: var(--social-svg); height: var(--social-svg); }
+
+    .footer {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+      background: color(display-p3 0.7686 0.1686 0.6706);
+      padding-top: clamp(5rem, 14vw, 12rem);
+    }
+    @supports not (color: color(display-p3 0 0 0)) {
+      .footer { background-color: #C42BAB; }
+    }
+    .footer-bg {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    .footer-overlay {
+      position: absolute;
+      left: 0; right: 0; top: 0; bottom: 38%;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1.5rem, 4vw, 3rem);
+    }
+    .footer-logo {
+      width: clamp(60px, 8vw, 120px);
+      height: auto;
+      margin-right: calc((48px - clamp(60px, 8vw, 120px)) / 2);
+    }
+    .footer-copyright {
+      width: clamp(160px, 22vw, 320px);
+      height: auto;
+    }
+    .socials { display: flex; gap: 1rem; align-items: center; }
+    .socials a { width: 44px; height: 44px; display: flex; align-items: center; justify-content: center; border: 1px solid var(--border); border-radius: 50%; transition: border-color 0.3s ease; }
+    .socials svg { width: 16px; height: 16px; fill: var(--text-secondary); transition: fill 0.3s ease; }
+    .socials a:hover svg { fill: var(--accent); }
+    .socials a:hover { border-color: var(--accent); }
+    @media (max-width: 768px) {
+      .footer-logo { width: clamp(50px, 10vw, 75px); }
+      .footer-copyright { width: clamp(140px, 28vw, 197px); }
+    }
+
+
+    /* ===== PLACEHOLDER ===== */
+    .placeholder-img {
+      width: 100%; height: 100%; min-height: 300px; background: var(--surface);
+      display: flex; align-items: center; justify-content: center;
+      color: var(--text-tertiary); font-size: 0.8rem; font-weight: 500;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+
+    /* ===== STAGGER ===== */
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+    .stagger-item {
+      opacity: 0; transform: translateY(30px);
+      transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .stagger-item.stagger-visible { opacity: 1; transform: translateY(0); }
+
+    /* ===== RESPONSIVE ===== */
+    /* 1440+ desktop — positions only, sizes via vars */
+    @media (min-width: 1440px) {
+      .hero { height: 99.9vh; }
+      .hero-word--turning { top: 9.8vh; top: 9.8dvh; }
+      .hero-word--beauty { top: 36.4vh; top: 36.4dvh; }
+      .hero-word--into { top: 63.1vh; top: 63.1dvh; }
+      .hero-word--chaos { top: 63.1vh; top: 63.1dvh; }
+      .hero-logo { top: 16.4vh !important; top: 16.4dvh !important; }
+      .hero-tags { top: 44.6vh; top: 44.6dvh; right: calc(var(--gutter) - 2px); }
+      .hero-bio-left { top: 72vh; top: 72dvh; left: 23.7vw; }
+      .hero-bio-right { top: 72vh; top: 72dvh; left: 47.9vw; }
+      .about-photo { margin-top: 0; }
+      .about-3d { top: 357px; left: 94px; width: 269px; }
+      .about-stickers { top: 718px; left: 21px; }
+      .about-stickers img { width: 319px; }
+      .about-media { min-height: 823px; }
+    }
+
+    /* 1600+ — positions only, sizes via vars */
+    @media (min-width: 1600px) {
+      .hero-bio-left { top: 68.8vh; top: 68.8dvh; }
+      .hero-bio-right { top: 68.8vh; top: 68.8dvh; }
+      .about-skills { gap: 10px; }
+      .about-heading { font-size: clamp(2.5rem, 4vw, 4rem); }
+    }
+
+    /* 1800+ full HD — positions only, sizes via vars */
+    @media (min-width: 1800px) {
+      .hero { height: 104.9vh; }
+      .hero-word--turning { top: 7.8vh; top: 7.8dvh; }
+      .hero-word--beauty { top: 37.5vh; top: 37.5dvh; }
+      .hero-word--into { top: 66.9vh; top: 66.9dvh; }
+      .hero-word--chaos { top: 66.9vh; top: 66.9dvh; }
+      .hero-logo { top: 14.3vh !important; top: 14.3dvh !important; max-width: 515px; }
+      .hero-tags { top: 44.9vh; top: 44.9dvh; align-items: flex-end; }
+      .hero-bio-left { top: 75.3vh; top: 75.3dvh; left: 17.8vw; max-width: 429px; }
+      .hero-bio-right { top: 75.3vh; top: 75.3dvh; left: 47.7vw; max-width: 349px; }
+      .about-3d { top: 395px; left: 312px; width: 289px; }
+      .about-stickers { top: 769px; left: 73px; }
+      .about-stickers img { width: 374px; }
+      .about-media { min-height: 887px; }
+    }
+
+    /* Tablet landscape — positions + layout, sizes via vars */
+    @media (max-width: 1024px) {
+      .hero { height: 93.5vh; min-height: 93.5vh; min-height: 93.5dvh; }
+      .hero-word--turning { top: 14vh; top: 14dvh; }
+      .hero-word--beauty { top: 38vh; top: 38dvh; }
+      .hero-word--into { top: 62vh; top: 62dvh; }
+      .hero-word--chaos { top: 62vh; top: 62dvh; }
+      .hero-logo { top: 18.75vh !important; top: 18.75dvh !important; }
+      .hero-photo { width: 20vw; top: 58vh; top: 58dvh; }
+      .hero-bio-left { top: 67vh; top: 67dvh; left: 23.8vw; }
+      .hero-bio-right { top: 67vh; top: 67dvh; left: 49vw; }
+      .hero-tags { top: 43vh; top: 43dvh; right: calc(var(--gutter) - 8px); }
+      .about-3d { position: absolute; top: 25px; left: auto; right: -163px; width: var(--about-3d-w); }
+      .about-stickers { position: absolute; top: 277px; bottom: auto; left: 231px; right: auto; margin-top: 0; }
+      .about-stickers img { width: 278px; }
+    }
+
+    /* Mid-desktop (1025-1439) */
+    @media (min-width: 1025px) and (max-width: 1439px) {
+      .hero-tags { right: calc(var(--gutter) - 20px); top: 44.1vh; top: 44.1dvh; }
+    }
+
+    /* Tablet portrait / mobile landscape — layout + positions, sizes via vars */
+    @media (max-width: 768px) {
+      .nav-hamburger { position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); margin-left: 0; }
+      .lang-toggle { position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); }
+
+      .hero { height: 47.8vh; min-height: 47.8vh; min-height: 47.8dvh; padding-bottom: 2rem; }
+      .hero-word--turning { left: auto; right: 0; top: 6vh; }
+      .hero-word--beauty { left: 0; right: auto; top: 17.8vh; }
+      .hero-word--into { left: 0; right: auto; top: 29.6vh; }
+      .hero-word--chaos { left: auto; right: 0; top: 29.6vh; }
+
+      .hero-logo { left: 6.9vw !important; top: 7.0vh !important; right: auto !important; min-width: 253px; }
+
+      .hero-photo { right: 4vw; top: 36vh; width: 22vw; height: 22vh; }
+
+      /* Hire me: grid layout */
+      .hero-tags {
+        top: 18.4vh; left: auto; right: calc(var(--gutter) - 20px); transform: none;
+        flex-direction: row; align-items: flex-start; gap: 6px;
+        min-width: auto; max-width: calc(100vw - var(--gutter) * 2);
+      }
+      .hero-tags-wrapper { gap: 6px; flex-direction: row; align-items: stretch; width: 100%; }
+      .hero-tags-left {
+        display: grid;
+        grid-template-columns: var(--icon-size) 1fr;
+        grid-template-rows: var(--pill-h) var(--pill-h);
+        gap: 4px; align-items: center; flex: 1;
+      }
+      .hero-tags-row { display: contents; }
+      .hero-contact-icons { display: contents; margin-right: 0; }
+      .hero-contact-icon--whatsapp { grid-row: 1; grid-column: 1; }
+      .hero-contact-icon--email { grid-row: 2; grid-column: 1; }
+      .hero-hire-tag { width: auto; grid-row: 1; grid-column: 2; }
+      .hero-designer-tag { width: auto; grid-row: 2; grid-column: 2; }
+
+      /* Bio: merged into single block */
+      .hero-bio-left { top: 31.4vh; left: 27.7vw; max-width: var(--bio-max-w); }
+      .hero-bio-left p { white-space: normal; display: inline; }
+      .hero-bio-left p::after { content: ' '; }
+      .hero-bio-right { display: none !important; }
+
+      .section { padding: clamp(4rem, 8vw, 6rem) 1.5rem; }
+      .about-section { padding: clamp(4rem, 8vw, 6rem) var(--gutter); }
+      .contact { padding: clamp(4rem, 8vw, 6rem) var(--gutter); }
+      .section-heading { font-size: clamp(1.8rem, 5vw, 3rem); }
+      .illustrations-grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-media { margin-bottom: 2rem; }
+      .about-3d { position: absolute; top: 17px; left: auto; right: -1rem; width: var(--about-3d-w); }
+      .about-stickers { position: absolute; top: 189px; left: 459px; right: auto; width: 60px; height: 202px; overflow: hidden; }
+      .about-stickers img { width: 60px; min-width: 60px; }
+      .about-software { width: 44px; height: 44px; }
+      .contact-cta { min-height: 44px; display: inline-flex; align-items: center; justify-content: center; }
+    }
+
+    /* Mobile portrait — flex flow layout, sizes via vars */
+    @media (max-width: 480px) {
+      .nav-hamburger { position: absolute; left: 1.25rem; top: 50%; transform: translateY(-50%); margin-left: 0; }
+      .lang-toggle { position: absolute; right: 1.25rem; top: 50%; transform: translateY(-50%); }
+
+      .hero {
+        height: auto; min-height: auto; overflow: hidden;
+        display: flex; flex-wrap: wrap; align-items: baseline; justify-content: flex-end;
+        padding: 3rem 0 2rem; margin-top: 0;
+      }
+
+      .hero-word {
+        position: relative;
+        top: auto !important; left: auto !important; right: auto !important; bottom: auto !important;
+        font-size: 29vw;
+        flex-basis: 100%; text-align: right; line-height: 1; margin-bottom: 0.02em;
+      }
+      .hero-word--turning { order: 1; }
+      .hero-word--beauty { order: 2; }
+      .hero-word--into { order: 3; flex-basis: auto; margin-right: auto; text-align: left; }
+      .hero-word--chaos { order: 5; letter-spacing: 0.21em; }
+
+      .hero-logo {
+        position: relative;
+        top: auto !important; left: auto !important;
+        order: 4; flex-basis: auto; width: 42vw; min-width: 80px; max-width: none;
+        margin-left: 1vw; align-self: center;
+      }
+
+      .hero-photo { display: none; }
+
+      .hero-tags {
+        position: relative;
+        top: auto !important; right: auto !important; left: auto !important;
+        transform: none; order: 6; flex-basis: 100%;
+        margin-top: 1.5rem; flex-direction: row; align-items: flex-start;
+        justify-content: center; gap: 8px; max-width: none;
+        padding: 0 var(--gutter); margin-left: 0; margin-right: 0;
+      }
+      .hero-tags-wrapper { gap: 8px; flex-direction: row; align-items: stretch; width: 100%; }
+      .hero-tags-left {
+        display: grid;
+        grid-template-columns: var(--icon-size) 1fr;
+        grid-template-rows: var(--pill-h) var(--pill-h);
+        gap: 4px; align-items: center; flex: 1;
+      }
+      .hero-tags-row { display: contents; }
+      .hero-contact-icons { display: contents; margin-right: 0; }
+      .hero-contact-icon--whatsapp { grid-row: 1; grid-column: 1; }
+      .hero-contact-icon--email { grid-row: 2; grid-column: 1; }
+      .hero-hire-tag { width: auto; grid-row: 1; grid-column: 2; }
+      .hero-designer-tag { width: auto; grid-row: 2; grid-column: 2; }
+      .hero-tags-photo { height: 72px; }
+
+      .hero-bio-left {
+        position: relative;
+        top: auto !important; bottom: auto !important; left: auto !important;
+        order: 7; flex-basis: 100%; text-align: left;
+        margin-top: 1.5rem; margin-bottom: 3rem;
+        max-width: none; padding: 0 var(--gutter); margin-left: 0; margin-right: 0;
+      }
+      .hero-bio-left p { white-space: normal; display: inline; }
+      .hero-bio-left p::after { content: ' '; }
+      .hero-bio-right { display: none !important; }
+
+      .bento-name { font-size: 1rem; white-space: nowrap; }
+      .illustrations-grid { grid-template-columns: 1fr; gap: 16px; }
+      .illustration-card { aspect-ratio: 4/3; }
+
+      .about-media { max-width: 100%; }
+      .about-3d { position: absolute; top: 17px; left: auto; right: 0; width: var(--about-3d-w); }
+      .about-stickers { position: absolute; top: 140px; left: 224px; right: auto; width: 38px; height: 126px; overflow: hidden; }
+      .about-stickers img { width: 38px; min-width: 38px; }
+
+      .contact-socials { flex-wrap: wrap; justify-content: center; gap: 12px; max-width: 200px; margin-left: auto; margin-right: auto; }
+      .contact p { font-size: 0.9rem; }
+      .contact-cta { padding: 0.9rem 2rem; font-size: 0.75rem; }
+
+      /* Footer */
+      .footer-logo { width: clamp(50px, 14vw, 75px); }
+      .footer-copyright { width: clamp(140px, 40vw, 197px); }
+    }
+
+    /* 400-480 mobile: adjusted about positions, sizes via vars */
+    @media (min-width: 400px) and (max-width: 480px) {
+      .about-3d { width: var(--about-3d-w); right: -1rem; }
+      .about-stickers { top: 141px; left: 246px; width: 45px; height: 149px; }
+      .about-stickers img { width: 45px; min-width: 45px; }
+    }
+  </style>
+</head>
+<body>
+
+  <a href="#projects" class="sr-only" style="position:absolute;top:0;left:-9999px;z-index:99999;background:var(--accent);color:#fff;padding:1rem 2rem;" onfocus="this.style.left='0'" onblur="this.style.left='-9999px'">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" aria-label="Main navigation">
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#top" data-i18n="nav.home" onclick="event.preventDefault();window.scrollTo({top:0,behavior:'smooth'});">Home</a></li>
+      <li><a href="#projects" data-i18n="nav.work">Work</a></li>
+      <li><a href="#illustrations" data-i18n="nav.personal">Illustrations</a></li>
+      <li><a href="#uiux">UI/UX</a></li>
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0;">
+      <div class="lang-toggle" role="group" aria-label="Language">
+        <button class="lang-btn active" data-lang="en" aria-pressed="true">EN</button>
+        <button class="lang-btn" data-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <button class="nav-hamburger" id="navToggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <noscript><p style="color:#fff;text-align:center;padding:4rem;font-family:sans-serif;">This portfolio requires JavaScript to display projects. Please enable it.</p></noscript>
+  <main>
+  <h1 class="sr-only">Lucas Vaz — Graphic Designer, Illustrator & Art Director</h1>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+
+    <!-- Animated logo -->
+    <div class="hero-logo">
+      <video src="assets/img/logo-lucas-vaz-motion.mp4" autoplay muted playsinline loop aria-label="Lucas Vaz animated logo"></video>
+    </div>
+
+    <!-- OFFBIT word layers -->
+    <div class="hero-word hero-word--turning" aria-hidden="true">turning</div>
+    <div class="hero-word hero-word--beauty"  aria-hidden="true">beauty</div>
+    <div class="hero-word hero-word--into"    aria-hidden="true">into</div>
+    <div class="hero-word hero-word--chaos" aria-hidden="true">cha<span class="hero-word--chaos-o">o</span>s</div>
+
+    <!-- Tags row — flex auto layout, always aligned -->
+    <div class="hero-tags">
+      <div class="hero-tags-wrapper">
+        <div class="hero-tags-left">
+          <!-- Row 1: icons + hire -->
+          <div class="hero-tags-row">
+            <div class="hero-contact-icons">
+              <a href="https://wa.me/5534988568664" target="_blank" rel="noopener noreferrer" class="hero-contact-icon hero-contact-icon--whatsapp" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              </a>
+              <a href="mailto:contato@lucasvfa.com.br" class="hero-contact-icon hero-contact-icon--email" aria-label="Email">
+                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+              </a>
+            </div>
+            <div class="hero-hire-tag" aria-label="Available to hire">
+              <div class="hero-hire-dot-wrap">
+                <div class="hero-hire-dot-core"></div>
+                <div class="hero-hire-dot-ring"></div>
+              </div>
+              <span class="hero-hire-label">HIRE ME</span>
+            </div>
+          </div>
+          <!-- Row 2: professions tag (same width as row above) -->
+          <div class="hero-designer-tag">
+            <div class="designer-text-slider">
+              <span class="designer-text-item">DESIGNER</span>
+              <span class="designer-text-item">ART DIRECTOR</span>
+              <span class="designer-text-item">MOTION DESIGNER</span>
+              <span class="designer-text-item">ILLUSTRATOR</span>
+              <span class="designer-text-item">ANIMATOR</span>
+              <span class="designer-text-item">DESIGNER</span>
+            </div>
+          </div>
+        </div>
+        <!-- Photo aligned to the right -->
+        <div class="hero-tags-photo">
+          <picture>
+            <source srcset="assets/img/hero-photo.webp" type="image/webp">
+            <img src="assets/img/hero-photo.png" alt="Lucas Vaz" decoding="async">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bio text — left column (4 fixed lines) -->
+    <div class="hero-bio-left" data-i18n-html="hero.bio1">
+      <p>With 19+ years of experience,</p>
+      <p>I've shaped visual identities</p>
+      <p>and creative campaigns for</p>
+      <p>global brands from P&amp;G to Web3.</p>
+    </div>
+
+    <!-- Bio text — right column (4 fixed lines) -->
+    <div class="hero-bio-right" data-i18n-html="hero.bio2">
+      <p>I design systems,</p>
+      <p>I illustrate worlds,</p>
+      <p>I art direct teams, and</p>
+      <p>I animate ideas into reality.</p>
+    </div>
+
+  </section>
+
+  <!-- ===================== PROJECTS ===================== -->
+  <div id="projects">
+    <h2 class="sr-only">Work</h2>
+  </div>
+
+  <div class="divider" style="margin-top:clamp(8rem,16vw,14rem)" aria-hidden="true"></div>
+
+  <!-- ===================== ILLUSTRATIONS ===================== -->
+  <section class="section" id="illustrations">
+    <h2 class="section-heading reveal" data-i18n="personal.heading">Illustrations</h2>
+    <div class="illustrations-grid" id="illustrations-grid"></div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ===================== UI/UX DESIGN ===================== -->
+  <section class="section" id="uiux">
+    <h2 class="section-heading reveal" data-i18n="uiux.heading">UI/UX Design</h2>
+    <div class="uiux-grid" id="uiux-grid">
+      <a class="uiux-card stagger-item" href="project.html?id=ui-ux-design">
+        <picture>
+          <source srcset="assets/img/uiux-thumb.webp" type="image/webp">
+          <img src="assets/img/uiux-thumb.png" alt="UI/UX Design" decoding="async">
+        </picture>
+        <div class="overlay">
+          <span class="bento-overlay-btn" data-i18n="bento.see">SEE MORE</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about-section" id="about">
+    <div class="about-grid">
+      <div class="about-left reveal">
+        <p class="section-label" data-i18n="about.label">About</p>
+        <h2 class="about-heading" data-i18n-html="about.heading">Lucas <span class="accent">Vaz</span></h2>
+        <div class="about-media">
+          <div class="about-photo">
+            <video src="assets/img/pfp_animada.mp4" muted autoplay loop playsinline preload="none" aria-hidden="true"></video>
+          </div>
+          <div class="about-3d">
+            <video src="assets/img/lucas-3d.mp4" muted autoplay loop playsinline preload="none" aria-hidden="true"></video>
+          </div>
+          <div class="about-stickers">
+            <picture>
+              <source media="(max-width: 768px)" srcset="assets/img/lucas-vetor-vertical.png">
+              <picture>
+                <source srcset="assets/img/lucas-vetor.webp" type="image/webp">
+                <img src="assets/img/lucas-vetor.png" alt="Lucas Vaz cartoon stickers" loading="lazy" decoding="async">
+              </picture>
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div class="about-right reveal">
+        <p class="about-bio" data-i18n-html="about.bio">It all started because of Dragon Ball, when I tried to recreate the characters in my drawings. Nineteen years later, here I am creating visuals and campaigns for brands like <strong>Gillette, Ketel One</strong> and <strong>Downy</strong>.<br><br>My professional career started in 2007, but the real turning point came in 2011: fresh out of my Advertising degree, I founded <strong>Ag&ecirc;ncia Dom Quixote</strong>, focused on brand identity, promotional activations and corporate materials. In 2014, seeking more creative freedom, I stepped away and created <strong>Studio Astronauta</strong> &mdash; a space where I could explore my own visual path. Until 2022, I developed and executed online and offline campaigns for a wide range of brands.<br><br>In 2021, alongside the Studio, I joined <strong>New Vegas</strong>, a multi-format digital creative agency. As Art Director, I created campaigns for P&amp;G brands like <strong>Gillette, Ariel, Oral-B</strong> and <strong>Downy</strong>, as well as <strong>Ketel One</strong> and several pitches. I directed shoots that brought a fresh take on how those brands communicated digitally.<br><br>In 2024, I joined <strong>Ninety Eight</strong>, a creative agency focused on crypto and web3. I led the visual development of animated and illustrated digital campaigns, producing 2D animations, motion design and original illustrations. I also managed a team of designers and animators, ensuring creative direction and visual consistency across every project.<br><br>My work lives at the intersection of illustration, frame-by-frame 2D animation, motion design, art direction and branding.<br><br>Outside of that, I&rsquo;m a proud dad, a coffee enthusiast, a self-taught cook, and (when time allows) someone who sees videogames as art and culture, beyond just entertainment.</p>
+
+        <p class="about-section-label">Skills</p>
+        <div class="about-skills">
+          <span class="about-skill">Art Direction</span>
+          <span class="about-skill">Motion Design</span>
+          <span class="about-skill">2D Animation</span>
+          <span class="about-skill">Illustration</span>
+          <span class="about-skill">Graphic Design</span>
+          <span class="about-skill">Branding</span>
+          <span class="about-skill">UI/UX Design</span>
+          <span class="about-skill">Social Media</span>
+        </div>
+
+        <p class="about-section-label">Tools</p>
+        <div class="about-softwares">
+          <div class="about-software" title="Photoshop"><img src="assets/img/sw-photoshop.svg" alt="Photoshop" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="Illustrator"><img src="assets/img/sw-illustrator.svg" alt="Illustrator" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="After Effects"><img src="assets/img/sw-aftereffects.svg" alt="After Effects" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="Premiere"><img src="assets/img/sw-premiere.svg" alt="Premiere" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="Figma"><img src="assets/img/sw-figma.svg" alt="Figma" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="Clip Studio Paint"><picture><source srcset="assets/img/sw-clipstudio.webp" type="image/webp"><img src="assets/img/sw-clipstudio.png" alt="Clip Studio Paint" loading="lazy" decoding="async"></picture></div>
+          <div class="about-software" title="Procreate"><img src="assets/img/sw-procreate.png" alt="Procreate" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="ChatGPT"><img src="assets/img/sw-chatgpt.svg" alt="ChatGPT" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="Claude"><img src="assets/img/sw-claude.svg" alt="Claude" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="Firefly"><img src="assets/img/sw-firefly.svg" alt="Firefly" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider" aria-hidden="true"></div>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <p class="section-label reveal" data-i18n-html="contact.label"><span class="pulse-dot"></span>Available for work</p>
+    <h2 class="contact-heading reveal" data-i18n-html="contact.heading">You scrolled this&nbsp;far.<br><span class="accent">That says something.</span></h2>
+    <p class="reveal" data-i18n="contact.desc">Now let's see what we can build together. I'm always open for full time roles or project based opportunities.</p>
+    <div class="socials reveal contact-socials" id="contact-socials"></div>
+  </section>
+
+  <!-- Back to top -->
+  <div class="back-to-top-wrap">
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg viewBox="0 0 24 24"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
+    </button>
+  </div>
+
+  </main>
+
+  <footer class="footer">
+    <img class="footer-bg" src="assets/img/footer-bg.svg" alt="" loading="lazy">
+    <div class="footer-overlay">
+      <img class="footer-copyright" src="assets/img/footer-copyright.svg" alt="© Lucas Vaz. All rights reserved.">
+      <img class="footer-logo" src="assets/img/footer-logo.svg" alt="Lucas Vaz logo">
+    </div>
+  </footer>
+
+  <!-- Lenis Smooth Scroll -->
+  <script src="assets/js/lenis.min.js"></script>
+
+  <script>
+  (function() {
+    'use strict';
+
+    // ===== I18N SYSTEM =====
+    const i18n = {
+      en: {
+        'nav.home': 'Home',
+        'nav.work': 'Work',
+        'nav.personal': 'Illustrations',
+        'nav.about': 'About',
+        'nav.contact': 'Contact',
+        'hero.bio1': '<p>With 19+ years of experience,</p><p>I\'ve shaped visual identities</p><p>and creative campaigns for</p><p>global brands from P&amp;G to Web3.</p>',
+        'hero.bio2': '<p>I design systems,</p><p>I illustrate worlds,</p><p>I art direct teams, and</p><p>I animate ideas into reality.</p>',
+        'personal.heading': 'Illustrations',
+        'contact.label': '<span class="pulse-dot"></span>Available for work',
+        'contact.heading': 'You scrolled this&nbsp;far.<br><span class="accent">That says something.</span>',
+        'contact.desc': 'Now let\'s see what we can build together. I\'m always open for full time roles or project based opportunities.',
+        'about.label': 'About',
+        'about.heading': 'Lucas <span class="accent">Vaz</span>',
+        'about.bio': 'It all started because of Dragon Ball, when I tried to recreate the characters in my drawings. Nineteen years later, here I am creating visuals and campaigns for brands like <strong>Gillette, Ketel One</strong> and <strong>Downy</strong>.<br><br>My professional career started in 2007, but the real turning point came in 2011: fresh out of my Advertising degree, I founded <strong>Ag\u00EAncia Dom Quixote</strong>, focused on brand identity, promotional activations and corporate materials. In 2014, seeking more creative freedom, I stepped away and created <strong>Studio Astronauta</strong> \u2014 a space where I could explore my own visual path. Until 2022, I developed and executed online and offline campaigns for a wide range of brands.<br><br>In 2021, alongside the Studio, I joined <strong>New Vegas</strong>, a multi-format digital creative agency. As Art Director, I created campaigns for P&amp;G brands like <strong>Gillette, Ariel, Oral-B</strong> and <strong>Downy</strong>, as well as <strong>Ketel One</strong> and several pitches. I directed shoots that brought a fresh take on how those brands communicated digitally.<br><br>In 2024, I joined <strong>Ninety Eight</strong>, a creative agency focused on crypto and web3. I led the visual development of animated and illustrated digital campaigns, producing 2D animations, motion design and original illustrations. I also managed a team of designers and animators, ensuring creative direction and visual consistency across every project.<br><br>My work lives at the intersection of illustration, frame-by-frame 2D animation, motion design, art direction and branding.<br><br>Outside of that, I\u2019m a proud dad, a coffee enthusiast, a self-taught cook, and (when time allows) someone who sees videogames as art and culture, beyond just entertainment.',
+        'bento.see': 'SEE MORE',
+        'uiux.heading': 'UI/UX Design'
+      },
+      pt: {
+        'nav.home': 'Início',
+        'nav.work': 'Trabalhos',
+        'nav.personal': 'Ilustrações',
+        'nav.about': 'Sobre',
+        'nav.contact': 'Contato',
+        'hero.bio1': '<p>Há mais de 19 anos criando</p><p>identidades visuais e campanhas</p><p>pra marcas globais,</p><p>de P&amp;G a Web3.</p>',
+        'hero.bio2': '<p>Crio sistemas,</p><p>ilustro mundos,</p><p>dirijo equipes, e</p><p>animo ideias em realidade.</p>',
+        'personal.heading': 'Ilustrações',
+        'contact.label': '<span class="pulse-dot"></span>Disponível para trabalho',
+        'contact.heading': 'Voc\u00EA desceu at\u00E9&nbsp;aqui.<br><span class="accent">Isso quer dizer&nbsp;algo.</span>',
+        'contact.desc': 'Agora vamos descobrir o que construiremos juntos. Estou aberto para vagas full time ou projetos.',
+        'about.label': 'Sobre',
+        'about.heading': 'Lucas <span class="accent">Vaz</span>',
+        'about.bio': 'Tudo come\u00E7ou por causa de Dragon Ball quando eu tentava reproduzir os personagens nos meus desenhos. Dezenove anos depois, c\u00E1 estou criando visuais e campanhas para marcas como <strong>Gillette, Ketel One</strong> e <strong>Downy</strong>.<br><br>Minha carreira profissional come\u00E7ou em 2007, mas a virada real veio em 2011: rec\u00E9m-formado em Comunica\u00E7\u00E3o Social, fundei a <strong>Ag\u00EAncia Dom Quixote</strong>, focada em identidade visual, a\u00E7\u00F5es promocionais e materiais corporativos. Em 2014, buscando mais liberdade criativa, me afastei e criei o <strong>Studio Astronauta</strong>, um espa\u00E7o onde pude explorar meu pr\u00F3prio caminho visual. At\u00E9 2022, desenvolvi e executei campanhas online e offline para uma ampla gama de marcas.<br><br>Em 2021, em paralelo ao Studio, entrei na <strong>New Vegas</strong>, ag\u00EAncia digital de cria\u00E7\u00E3o multiformato. Como Diretor de Arte, criei campanhas para marcas P&amp;G como <strong>Gillette, Ariel, Oral-B</strong> e <strong>Downy</strong>, al\u00E9m de <strong>Ketel One</strong> e diversas concorr\u00EAncias. Dirigi shootings que trouxeram um refresh na forma como essas marcas se comunicavam no digital.<br><br>Em 2024, entrei na <strong>Ninety Eight</strong>, ag\u00EAncia criativa focada em crypto e web3. Liderei o desenvolvimento visual de campanhas digitais animadas e ilustradas, produzindo anima\u00E7\u00F5es 2D, motion design e ilustra\u00E7\u00F5es originais. Tamb\u00E9m coordenei uma equipe de designers e animadores, garantindo dire\u00E7\u00E3o criativa e consist\u00EAncia visual em todos os projetos.<br><br>Meu trabalho vive na interse\u00E7\u00E3o entre ilustra\u00E7\u00E3o, anima\u00E7\u00E3o 2D quadro a quadro, motion design, dire\u00E7\u00E3o de arte e branding.<br><br>Fora disso, sou um pai orgulhoso, apreciador de bons caf\u00E9s, cozinheiro autodidata e (quando sobra tempo) algu\u00E9m que enxerga videogames como arte e cultura, al\u00E9m de entretenimento.',
+        'bento.see': 'VER MAIS',
+        'uiux.heading': 'UI/UX Design'
+      }
+    };
+
+    function setLang(lang) {
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (i18n[lang][key]) el.textContent = i18n[lang][key];
+      });
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (i18n[lang][key]) el.innerHTML = i18n[lang][key];
+      });
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const isActive = btn.dataset.lang === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+      document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+      // Merge bio texts into one paragraph on mobile
+      if (window.innerWidth <= 768) {
+        var bioLeft = document.querySelector('.hero-bio-left');
+        var bioRight = document.querySelector('.hero-bio-right');
+        if (bioLeft && bioRight) {
+          bioLeft.querySelectorAll('.bio-merged').forEach(function(s) { s.remove(); });
+          bioRight.querySelectorAll('p').forEach(function(p) {
+            var span = document.createElement('span');
+            span.className = 'bio-merged';
+            span.textContent = ' ' + p.textContent;
+            span.style.display = 'inline';
+            bioLeft.appendChild(span);
+          });
+        }
+      }
+    }
+
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+      btn.addEventListener('click', () => setLang(btn.dataset.lang));
+    });
+
+    setLang('en');
+
+    // ===== SOCIAL ICONS TEMPLATE =====
+    const socialLinks = [
+      { href: 'https://www.instagram.com/lucasvfa', label: 'Instagram', icon: '<path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>' },
+      { href: 'https://www.linkedin.com/in/lucasvfa', label: 'LinkedIn', icon: '<path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>' },
+      { href: 'https://t.me/lukessssss', label: 'Telegram', icon: '<path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.17.33.015.097.034.313.019.483z"/>' },
+      { href: 'https://wa.me/5534988568664', label: 'WhatsApp', icon: '<path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>' },
+      { href: 'https://x.com/lucasvfa', label: 'X', icon: '<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>' }
+    ];
+
+    const emailLink = { href: 'mailto:contato@lucasvfa.com.br', label: 'Email', icon: '<path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>' };
+
+    function renderSocials(containerId) {
+      const c = document.getElementById(containerId);
+      if (!c) return;
+      const allLinks = [...socialLinks, emailLink];
+      c.innerHTML = allLinks.map(s =>
+        `<a href="${s.href}" ${s.href.startsWith('mailto') ? '' : 'target="_blank" rel="noopener noreferrer"'} aria-label="${s.label}"><svg viewBox="0 0 24 24">${s.icon}</svg></a>`
+      ).join('');
+    }
+    renderSocials('contact-socials');
+
+    // ===== PROJECT DATA =====
+    const projects = [
+      { id: 'gillette', name: 'Gillette', type: 'Art Direction · Social Media · Motion Design', cover: 'assets/img/gillette_cover.png', role: 'Led art direction and motion design for Gillette Brazil social media at New Vegas agency.', desc: 'Art direction and digital content creation for Gillette\'s social media presence in Brazil.' },
+      { id: 'downyariel', name: 'Downy & Ariel', type: 'Art Direction · Photography · Motion', cover: 'assets/img/da_cover.png', role: 'Art directed photo shoots and motion pieces for P&G brands Downy and Ariel.', desc: 'Art direction, photography and content creation for P&G\'s Downy and Ariel brands.' },
+      { id: 'neiro', name: 'Neiro', type: '2D Animation · Illustration · Crypto', cover: null, coverVideo: 'assets/img/neiro_cover.mp4', role: '2D animation and video production for $NEIRO memecoin.', desc: '2D animation and video production for $NEIRO memecoin.' },
+      { id: 'plano-b', name: 'Plano B', type: 'Branding · Visual Identity · Motion', cover: 'assets/img/planob_cover.mp4', role: 'Complete branding and visual identity development for Plano B.', desc: 'Complete branding and visual identity development for Plano B.' },
+      { id: 'brett', name: 'BRETT', type: '2D Animation · Creative Concept · Illustration · Crypto', cover: 'assets/img/brett_cover.mp4', role: 'Creative concepts and design work for $BRETT across multiple campaigns.', desc: 'Creative concepts and design work for $BRETT across multiple campaigns.' },
+      { id: 'gillette-venus', name: 'Gillette Venus', type: 'Art Direction · Social Media', cover: 'assets/img/gv_cover.png', role: 'Visual development and social media art direction for Gillette Venus at New Vegas.', desc: 'Visual development and social media art direction for Gillette Venus.' },
+      { id: 'qace', name: 'QACE Dynamics', type: 'Logo Design · Branding · Crypto', cover: 'assets/img/qace_cover.jpg', role: 'Logo design and brand identity development for QACE Dynamics.', desc: 'Logo design and brand identity development for QACE Dynamics.' },
+      { id: 'wolf', name: 'Wolf', type: 'Illustration · Branding · Crypto', cover: 'assets/img/wolf-cover.jpg', role: 'Illustration and visual identity for Wolf memecoin project.', desc: 'Illustration and branding for Wolf crypto project.' },
+      { id: 'mong', name: 'Mong', type: 'Animation · Illustration · Crypto', cover: null, coverVideo: 'assets/img/mong-cover.mp4', role: '2D animation and video production for $MONG memecoin.', desc: '2D animation and video production for $MONG memecoin.' },
+      { id: 'ketel-one', name: 'Ketel One Botanical', type: 'Social Media · Art Direction', cover: 'assets/img/ketel_cover.png', role: 'Part of the creative team at New Vegas that launched Ketel One Botanical on digital media in Brazil.', desc: 'Part of the creative team that launched Ketel One Botanical on digital media in Brazil.' },
+      { id: 'doodi', name: 'Doodi', type: '2D Animation · Illustration · Motion', cover: null, coverVideo: 'assets/img/doodi_cover.mp4', role: 'Character animation and motion design for Doodi.', desc: 'Character animation and motion design for Doodi.' },
+      { id: 'cosmopolitan', name: 'Cosmopolitan', type: 'Social Media · Art Direction · Motion Design', cover: 'assets/img/cosmo_cover.png', role: 'Social media art direction and content creation for Cosmopolitan events.', desc: 'Social media art direction and content creation for Cosmopolitan events.' },
+      { id: 'black-duck', name: 'Black Duck Crossfit', type: 'Branding · Visual Identity · Motion', cover: 'assets/img/bdc_cover.mp4', role: 'Bold branding and visual identity for Black Duck Crossfit.', desc: 'Bold branding and visual identity for Black Duck Crossfit.' },
+      { id: 'veneza', name: 'Veneza', type: 'Branding · Visual Identity', cover: 'assets/img/veneza_cover.png', role: 'Brand identity and visual system for Veneza.', desc: 'Brand identity and visual system for Veneza.' },
+      { id: 'orica', name: 'Orica', type: 'Video · Motion · Trailer', cover: null, coverVideo: 'assets/img/orica_cover.mp4', role: 'Trailer production and motion design for Orica.', desc: 'Trailer production and motion design for Orica.' },
+      { id: 'candle', name: 'Candle', type: 'Motion Design · Social Content · Video', cover: null, coverVideo: 'assets/img/candle_cover.mp4', role: 'Motion design and video content for Candle.', desc: 'Motion design and video content for Candle.' },
+      { id: 'blockwise', name: 'Blockwise', type: 'Logo Design · Branding · Crypto', cover: 'assets/img/blockwise_cover.png', role: 'Branding design for a crypto project.', desc: 'Branding design for a crypto project.' },
+      { id: 'bezzi', name: 'Gustavo Bezzi', type: 'Motion Design · Video', cover: null, coverVideo: 'assets/img/bezzi_cover.mp4', role: 'Motion design and video content for Gustavo Bezzi.', desc: 'Motion design and video content for Gustavo Bezzi.' },
+      { id: 'masedo', name: 'Masedo Japanese Graffiti', type: 'Illustration · Design', cover: 'assets/img/masedo_cover.png', role: 'Japanese graffiti-inspired illustration and design for a japanese restaurant called Masedo.', desc: 'Japanese graffiti-inspired illustration and design for a japanese restaurant called Masedo.' },
+      { id: 'bula', name: 'Bula', type: 'Branding', cover: 'assets/img/bula_cover.jpg', role: 'Branding design for Bula, a agency focused on helping children with rare diseases to raise money.', desc: 'Branding design for Bula, a agency focused on helping children with rare diseases to raise money.' },
+      { id: 'natur', name: 'Natur', type: 'Illustration', cover: 'assets/img/natur_cover.jpg', role: 'Vector illustrations for Natur.', desc: 'Vector illustrations for Natur.' }
+    ];
+
+    // ===== WEBP HELPER =====
+    function webpImg(src, alt, extra) {
+      extra = extra || '';
+      var dot = src.lastIndexOf('.');
+      if (dot === -1) return '<img src="' + src + '" alt="' + alt + '" decoding="async" ' + extra + '>';
+      var webpSrc = src.substring(0, dot) + '.webp';
+      return '<picture><source srcset="' + webpSrc + '" type="image/webp"><img src="' + src + '" alt="' + alt + '" decoding="async" ' + extra + '></picture>';
+    }
+
+    // ===== RENDER BENTO GRID =====
+    const projectsContainer = document.getElementById('projects');
+    const grid = document.createElement('div');
+    grid.className = 'bento-grid';
+
+    projects.forEach((p, idx) => {
+      const isExternal = !!p.behance;
+      const href = isExternal ? p.behance : `project.html?id=${p.id}`;
+      const num = String(idx + 1).padStart(2, '0');
+
+      // Determine the media source and its extension
+      const mediaSrc = p.cover || p.coverVideo || null;
+      const ext = mediaSrc ? mediaSrc.split('.').pop().toLowerCase() : '';
+
+      let mediaHTML = '';
+      if (mediaSrc && (ext === 'mp4' || ext === 'webm')) {
+        mediaHTML = `<video src="${mediaSrc}" muted loop playsinline preload="none"></video>`;
+      } else if (mediaSrc) {
+        // jpg, png — render with WebP fallback
+        mediaHTML = webpImg(mediaSrc, p.name, 'loading="lazy"');
+      } else {
+        mediaHTML = `<div style="width:100%;height:100%;min-height:200px;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">View on Behance</div>`;
+      }
+
+      const card = document.createElement('a');
+      card.href = href;
+      if (isExternal) { card.target = '_blank'; card.rel = 'noopener noreferrer'; }
+      card.className = 'bento-card' + (isExternal ? ' bento-card--external' : '');
+      card.dataset.project = p.id;
+      card.innerHTML = `
+        <div class="bento-media">${mediaHTML}<div class="bento-overlay"><span class="bento-overlay-btn" data-i18n="bento.see">SEE MORE</span></div></div>
+        <div class="bento-info">
+          <div class="bento-info-row">
+            <h3 class="bento-name">${p.name}</h3>
+          </div>
+        </div>`;
+      grid.appendChild(card);
+    });
+
+    projectsContainer.appendChild(grid);
+
+    // ===== JS MASONRY LAYOUT =====
+    function layoutMasonry() {
+      const gap = 24;
+      const gridWidth = grid.offsetWidth;
+      let cols = 3;
+      if (window.innerWidth <= 1024) cols = 2;
+      if (window.innerWidth <= 600) cols = 1;
+      const colWidth = (gridWidth - gap * (cols - 1)) / cols;
+      const colHeights = new Array(cols).fill(0);
+      const cards = grid.querySelectorAll('.bento-card');
+      cards.forEach(card => {
+        card.style.width = colWidth + 'px';
+        const minH = Math.min(...colHeights);
+        const colIdx = colHeights.indexOf(minH);
+        card.style.left = (colIdx * (colWidth + gap)) + 'px';
+        card.style.top = colHeights[colIdx] + 'px';
+        colHeights[colIdx] += card.offsetHeight + gap;
+      });
+      grid.style.height = Math.max(...colHeights) + 'px';
+    }
+
+    let cardsRevealed = false;
+    function revealCards() {
+      if (cardsRevealed) return;
+      cardsRevealed = true;
+      const cards = grid.querySelectorAll('.bento-card');
+      cards.forEach((card, i) => {
+        setTimeout(() => { card.style.opacity = '1'; }, i * 80);
+      });
+    }
+
+    // Wait for images to load, then layout
+    const mediaEls = grid.querySelectorAll('img');
+    let loaded = 0;
+    const totalMedia = mediaEls.length || 1;
+    function onMediaLoad() {
+      loaded++;
+      if (loaded >= totalMedia) { layoutMasonry(); revealCards(); }
+    }
+    mediaEls.forEach(el => {
+      if (el.complete) onMediaLoad();
+      else { el.addEventListener('load', onMediaLoad); el.addEventListener('error', onMediaLoad); }
+    });
+    // Also watch video elements for metadata load
+    grid.querySelectorAll('video').forEach(vid => {
+      vid.addEventListener('loadedmetadata', layoutMasonry);
+    });
+    // Re-layout when grid children change size (images/videos loading)
+    const gridRO = new ResizeObserver(() => { layoutMasonry(); revealCards(); });
+    grid.querySelectorAll('.bento-card').forEach(card => gridRO.observe(card));
+    let resizeTimer;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(layoutMasonry, 150);
+    });
+
+    // ===== LAZY PLAY BENTO GRID VIDEOS (play only when visible) =====
+    const videoPlayObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        const video = entry.target;
+        if (entry.isIntersecting) {
+          video.play().catch(function() {});
+        } else {
+          video.pause();
+        }
+      });
+    }, { rootMargin: '200px' });
+    grid.querySelectorAll('.bento-media video').forEach(v => videoPlayObserver.observe(v));
+    // Also observe non-bento videos (hero, about, etc.)
+    document.querySelectorAll('video').forEach(v => {
+      if (!v.closest('.bento-media')) videoPlayObserver.observe(v);
+    });
+
+    // ===== SHORT VIDEO PREVIEW (loop only first 6 seconds) =====
+    grid.querySelectorAll('.bento-media video').forEach(video => {
+      video.addEventListener('timeupdate', () => {
+        if (video.currentTime >= 6) video.currentTime = 0;
+      });
+    });
+
+    // ===== ILLUSTRATIONS =====
+    const personalProjects = [
+      { id: 'doshadeng', name: 'Dosha-Deng', cover: 'assets/img/doshadeng_cover.jpg' },
+      { id: 'insideofme', name: 'Inside of Me', cover: 'assets/img/insideofme_cover.webp' },
+      { id: 'pikachu', name: 'Pikachu Bodybuilder', cover: 'assets/img/pikachu_cover.jpg' },
+      { id: 'retiredrobots', name: 'Retired Robots', cover: 'assets/img/retiredrobots_cover.jpg' },
+      { id: 'astronaut-mural', name: 'Studio Astronauta Mural', cover: 'assets/img/astronaut_cover.jpg' },
+      { id: 'lil-chano', name: 'Lil Chano From 79th', cover: 'assets/img/lilchano_cover.jpg' }
+    ];
+    const ilGrid = document.getElementById('illustrations-grid');
+    ilGrid.innerHTML = personalProjects.map(p =>
+      `<a class="illustration-card stagger-item" href="project.html?id=${p.id}">
+        ${webpImg(p.cover, p.name, 'loading="lazy"')}
+        <div class="overlay">
+          <span class="bento-overlay-btn" data-i18n="bento.see">SEE MORE</span>
+        </div>
+      </a>`
+    ).join('');
+
+    // ===== UI/UX DESIGN SECTION =====
+    // Content is now in HTML directly
+
+    // ===== LOADER =====
+    window.addEventListener('load', () => {
+      // Re-apply language after all dynamic elements are rendered
+      setLang('en');
+    });
+
+    // ===== MOBILE NAV =====
+    const navToggleBtn = document.getElementById('navToggle');
+    const navLinksEl = document.getElementById('navLinks');
+    if (navToggleBtn && navLinksEl) {
+      const navEl = navToggleBtn.closest('.nav');
+      navToggleBtn.addEventListener('click', () => {
+        navToggleBtn.classList.toggle('active');
+        navLinksEl.classList.toggle('open');
+        if (navEl) navEl.classList.toggle('menu-open');
+        document.body.style.overflow = navLinksEl.classList.contains('open') ? 'hidden' : '';
+        navToggleBtn.setAttribute('aria-expanded', navLinksEl.classList.contains('open'));
+      });
+      navLinksEl.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          navToggleBtn.classList.remove('active');
+          navLinksEl.classList.remove('open');
+          if (navEl) navEl.classList.remove('menu-open');
+          document.body.style.overflow = '';
+        });
+      });
+    }
+
+    // ===== LENIS SMOOTH SCROLL =====
+    const lenis = window.lenis = new Lenis({
+      duration: 0.9,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.4,
+      touchMultiplier: 2
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    // ===== HERO PARALLAX =====
+    // Each word/element moves at a different rate — creates layered depth as you scroll
+    const parallaxMap = [
+      { sel: '.hero-word--turning', speedDown: 0.50, speedUp: 0.15 },
+      { sel: '.hero-word--beauty',  speedDown: 0.30, speedUp: 0.10 },
+      { sel: '.hero-word--into',    speedDown: 0.38, speedUp: 0.12 },
+      { sel: '.hero-word--chaos',   speedDown: 0.24, speedUp: 0.08 },
+      { sel: '.hero-tags',          speedDown: 0.30, speedUp: 0.10 },
+      { sel: '.hero-bio-left',      speedDown: 0.38, speedUp: 0.12 },
+      { sel: '.hero-bio-right',     speedDown: 0.38, speedUp: 0.12 },
+    ];
+    const parallaxEls = parallaxMap.map(({ sel, speedDown, speedUp }) => {
+      const el = document.querySelector(sel);
+      if (el) el.style.willChange = 'transform';
+      return { el, speedDown, speedUp, current: 0 };
+    });
+
+    // About section parallax (relative to section position)
+    const aboutParallaxMap = [
+      { sel: '.about-photo', speed: -0.06 },
+      { sel: '.about-3d',    speed: -0.12 },
+      { sel: '.about-stickers', speed: -0.04 },
+    ];
+    const aboutParallaxEls = aboutParallaxMap.map(({ sel, speed }) => {
+      const el = document.querySelector(sel);
+      if (el) el.style.willChange = 'transform';
+      return { el, speed };
+    });
+    const aboutSection = document.getElementById('about');
+
+    // Parallax driven by Lenis rAF — no duplicate scroll listener needed
+    let heroEntranceDone = false;
+    let lastScrollY = 0;
+    setTimeout(function() { heroEntranceDone = true; }, 1800);
+    let scrollDir = true; // true = down
+    let parallaxTicking = false;
+
+    function applyParallax(scrollY) {
+      const delta = scrollY - lastScrollY;
+      if (Math.abs(delta) > 1) scrollDir = delta > 0;
+      lastScrollY = scrollY;
+      const goingDown = scrollDir;
+      if (window.innerWidth > 480) parallaxEls.forEach((item) => {
+        if (!item.el || !heroEntranceDone) return;
+        const target = -scrollY * (goingDown ? item.speedDown : item.speedUp);
+        item.current += (target - item.current) * (goingDown ? 0.15 : 0.3);
+        item.el.style.transform = `translate3d(0,${item.current}px,0)`;
+      });
+      // About parallax (relative offset — use cached scroll position to avoid forced reflow)
+      if (aboutSection) {
+        const aboutTop = aboutSection.offsetTop - scrollY;
+        aboutParallaxEls.forEach(({ el, speed }) => {
+          if (el) el.style.transform = `translate3d(0,${aboutTop * speed}px,0)`;
+        });
+      }
+    }
+    lenis.on('scroll', (e) => {
+      applyParallax(e.scroll);
+    });
+
+    // ===== HERO ORCHESTRATED ENTRANCE =====
+    // Order: LOGO > BG TEXT > WA ICON > EMAIL ICON > HIRE ME > JOB LABEL > FOTO > TEXT
+    (function heroEntrance() {
+      const logo = document.querySelector('.hero-logo');
+      const words = document.querySelectorAll('.hero-word');
+      const waIcon = document.querySelector('.hero-contact-icon--whatsapp');
+      const emailIcon = document.querySelector('.hero-contact-icon--email');
+      const hireTag = document.querySelector('.hero-hire-tag');
+      const jobTag = document.querySelector('.hero-designer-tag');
+      const tagPhoto = document.querySelector('.hero-tags-photo');
+      const bioL = document.querySelector('.hero-bio-left');
+      const bioR = document.querySelector('.hero-bio-right');
+
+      // 1. Logo (0.15s)
+      setTimeout(function() { if (logo) logo.classList.add('hero-in'); }, 150);
+      // 2. BG words stagger (0.35s - 0.8s)
+      words.forEach(function(w, i) {
+        setTimeout(function() { w.classList.add('hero-in'); }, 350 + i * 120);
+      });
+      // 3. WhatsApp icon (0.85s)
+      setTimeout(function() { if (waIcon) waIcon.classList.add('hero-in'); }, 850);
+      // 4. Email icon (0.95s)
+      setTimeout(function() { if (emailIcon) emailIcon.classList.add('hero-in'); }, 950);
+      // 5. Hire Me tag (1.05s)
+      setTimeout(function() { if (hireTag) hireTag.classList.add('hero-in'); }, 1050);
+      // 6. Job label (1.15s)
+      setTimeout(function() { if (jobTag) jobTag.classList.add('hero-in'); }, 1150);
+      // 7. Photo (1.25s)
+      setTimeout(function() { if (tagPhoto) tagPhoto.classList.add('hero-in'); }, 1250);
+      // 8. White text (1.4s)
+      setTimeout(function() {
+        if (bioL) bioL.classList.add('hero-in');
+        if (bioR) bioR.classList.add('hero-in');
+      }, 1400);
+    })();
+
+
+    // Make anchor clicks work with Lenis
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          lenis.scrollTo(target, { offset: -(document.querySelector('nav').offsetHeight + 10) });
+        }
+      });
+    });
+
+    // ===== SCROLL REVEAL =====
+    const revealEls = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    // ===== STAGGER REVEALS =====
+    const staggerContainers = document.querySelectorAll('.illustrations-grid, .uiux-grid');
+    const staggerObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.querySelectorAll('.stagger-item').forEach((item, i) => {
+            setTimeout(() => item.classList.add('stagger-visible'), i * 120);
+          });
+          staggerObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    staggerContainers.forEach(c => staggerObs.observe(c));
+
+    // ===== VIDEO VIEWPORT PLAY/PAUSE =====
+    // (Handled by videoPlayObserver above with rootMargin '200px')
+
+    // ===== BACK TO TOP =====
+    const backToTopBtn = document.getElementById('backToTop');
+    if (backToTopBtn) {
+      backToTopBtn.addEventListener('click', () => {
+        lenis.scrollTo(0, { duration: 1.5 });
+      });
+    }
+
+  })();
+  </script>
+
+  <!-- Page transition overlay -->
+  <div class="page-transition" id="pageTransition" aria-hidden="true"></div>
+  <script>
+  (function() {
+    const overlay = document.getElementById('pageTransition');
+    const hasHash = window.location.hash.length > 1;
+
+    // Restore scroll position if returning from a project (only when no hash in URL)
+    const savedScroll = sessionStorage.getItem('indexScrollY');
+    if (savedScroll !== null) {
+      if (!hasHash) {
+        window.scrollTo(0, parseInt(savedScroll, 10));
+        if (window.lenis) window.lenis.scrollTo(parseInt(savedScroll, 10), { immediate: true });
+      }
+      sessionStorage.removeItem('indexScrollY');
+      // Skip hero entrance animation when returning
+      document.querySelectorAll('.hero-word, .hero-logo, .hero-contact-icon, .hero-hire-tag, .hero-designer-tag, .hero-tags-photo, .hero-bio-left, .hero-bio-right').forEach(function(el) {
+        el.classList.add('hero-in');
+      });
+    }
+
+    // CSS animation handles fade-out automatically; this handles bfcache
+    window.addEventListener('pageshow', function(e) {
+      if (e.persisted) {
+        overlay.style.animation = 'none';
+        overlay.offsetHeight; // force reflow
+        overlay.style.animation = '';
+      }
+    });
+
+    // Intercept internal links
+    document.addEventListener('click', function(e) {
+      const link = e.target.closest('a[href]');
+      if (!link) return;
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('http') || link.target === '_blank') return;
+      e.preventDefault();
+      // Save scroll position before leaving
+      sessionStorage.setItem('indexScrollY', String(window.scrollY));
+      overlay.classList.add('in');
+      setTimeout(function() {
+        window.location.href = href;
+      }, 350);
+    });
+  })();
+  </script>
+
+</body>
+</html>

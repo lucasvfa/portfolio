@@ -1,0 +1,14 @@
+<svg preserveAspectRatio="none" width="100%" height="100%" overflow="visible" style="display: block;" viewBox="0 0 511 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="favicon" clip-path="url(#clip0_0_4)">
+<path id="Vector" d="M509.511 319.757V512H0C85.7174 306.53 211.086 183.495 252.641 0H443.073C326.445 184.447 24.8129 349.564 76.1305 471.4C79.6903 479.865 85.6469 486.814 92.978 491.647C100.309 496.479 109.085 499.231 118.249 499.231C136.753 499.231 153.424 488.084 160.544 470.977L223.246 319.793H509.511V319.757Z" fill="var(--fill-0, black)" style="fill:black;fill-opacity:1;"/>
+<path id="Vector_2" d="M387.5 122.844L305.617 365.369H305.576V439.569H393.316L511 122.844H387.5Z" fill="var(--fill-0, #C42BAB)" style="fill:#C42BAB;fill:color(display-p3 0.7686 0.1686 0.6706);fill-opacity:1;"/>
+<path id="Vector_3" d="M105.477 122.844H0V228.406H105.477V122.844Z" fill="var(--fill-0, #C42BAB)" style="fill:#C42BAB;fill:color(display-p3 0.7686 0.1686 0.6706);fill-opacity:1;"/>
+<path id="Vector_4" d="M210.995 228.406H105.518V333.967H210.995V228.406Z" fill="var(--fill-0, #C42BAB)" style="fill:#C42BAB;fill:color(display-p3 0.7686 0.1686 0.6706);fill-opacity:1;"/>
+<path id="Vector_5" d="M316.472 334.008H210.995V439.569H316.472V334.008Z" fill="var(--fill-0, #C42BAB)" style="fill:#C42BAB;fill:color(display-p3 0.7686 0.1686 0.6706);fill-opacity:1;"/>
+</g>
+<defs>
+<clipPath id="clip0_0_4">
+<rect width="511" height="512" fill="white" style="fill:white;fill-opacity:1;"/>
+</clipPath>
+</defs>
+</svg>
