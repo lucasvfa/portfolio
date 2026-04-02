@@ -1546,7 +1546,7 @@
           <div class="about-software" title="Premiere"><img src="assets/img/sw-premiere.svg" alt="Premiere" loading="lazy" decoding="async"></div>
           <div class="about-software" title="Figma"><img src="assets/img/sw-figma.svg" alt="Figma" loading="lazy" decoding="async"></div>
           <div class="about-software" title="Clip Studio Paint"><picture><source srcset="assets/img/sw-clipstudio.webp" type="image/webp"><img src="assets/img/sw-clipstudio.png" alt="Clip Studio Paint" loading="lazy" decoding="async"></picture></div>
-          <div class="about-software" title="Procreate"><img src="assets/img/sw-procreate.png" alt="Procreate" loading="lazy" decoding="async"></div>
+          <div class="about-software" title="Procreate"><img src="assets/img/sw-procreate.webp" alt="Procreate" loading="lazy" decoding="async"></div>
           <div class="about-software" title="ChatGPT"><img src="assets/img/sw-chatgpt.svg" alt="ChatGPT" loading="lazy" decoding="async"></div>
           <div class="about-software" title="Claude"><img src="assets/img/sw-claude.svg" alt="Claude" loading="lazy" decoding="async"></div>
           <div class="about-software" title="Firefly"><img src="assets/img/sw-firefly.svg" alt="Firefly" loading="lazy" decoding="async"></div>
@@ -1741,7 +1741,9 @@
         mediaHTML = `<video src="${mediaSrc}" muted loop playsinline preload="none"></video>`;
       } else if (mediaSrc) {
         // jpg, png — render with WebP fallback
-        mediaHTML = webpImg(mediaSrc, p.name, 'loading="lazy"');
+        // First 3 cards: no lazy loading (above fold); first card gets fetchpriority
+        const imgAttrs = idx === 0 ? 'fetchpriority="high"' : (idx < 3 ? '' : 'loading="lazy"');
+        mediaHTML = webpImg(mediaSrc, p.name, imgAttrs);
       } else {
         mediaHTML = `<div style="width:100%;height:100%;min-height:200px;background:#0a0a0a;display:flex;align-items:center;justify-content:center;color:#333;font-size:0.7rem;letter-spacing:0.15em;text-transform:uppercase;">View on Behance</div>`;
       }

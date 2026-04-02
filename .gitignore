@@ -5,4 +5,5 @@ node_modules/
 package.json
 package-lock.json
 assets/img-backup/
+assets/img/_originals/
 optimize-assets.sh
