@@ -2093,6 +2093,7 @@
     // CSS animation handles fade-out automatically; this handles bfcache
     window.addEventListener('pageshow', function(e) {
       if (e.persisted) {
+        overlay.classList.remove('in'); // clear stuck transition state on back-nav
         overlay.style.animation = 'none';
         overlay.offsetHeight; // force reflow
         overlay.style.animation = '';

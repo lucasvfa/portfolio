@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <base href="/">
   <title>Project — Lucas Vaz</title>
   <meta name="description" content="Portfolio project by Lucas Vaz — Art Director, Illustrator and Motion Designer.">
   <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -700,7 +701,7 @@
   </style>
 </head>
 <body>
-  <a href="#hero" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
+  <a href="#hero" onclick="event.preventDefault();document.getElementById('hero').scrollIntoView({behavior:'smooth'});" class="sr-only" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
   <!-- Navigation -->
   <nav class="nav" id="mainNav" aria-label="Main navigation">
