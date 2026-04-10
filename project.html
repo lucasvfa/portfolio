@@ -1299,8 +1299,9 @@
     }
 
     // ===== GET PROJECT ID =====
-    var params = new URLSearchParams(window.location.search);
-    var projectId = params.get('id');
+    // Prefer pretty URL (/work/:slug), fall back to legacy ?id= for backward compat
+    var pathMatch = window.location.pathname.match(/^\/work\/([^\/\?#]+)/);
+    var projectId = pathMatch ? decodeURIComponent(pathMatch[1]) : new URLSearchParams(window.location.search).get('id');
     var projectIndex = projects.findIndex(function(p) { return p.id === projectId; });
 
     if (projectIndex === -1) {
@@ -1316,7 +1317,9 @@
 
     // ===== DYNAMIC CANONICAL URL =====
     var canonicalEl = document.querySelector('link[rel="canonical"]');
-    if (canonicalEl) canonicalEl.href = 'https://www.lucasvfa.com.br/project.html?id=' + projectId;
+    if (canonicalEl) canonicalEl.href = 'https://www.lucasvfa.com.br/work/' + projectId;
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) ogUrl.content = 'https://www.lucasvfa.com.br/work/' + projectId;
 
     // ===== SET PAGE TITLE & OG META =====
     document.title = project.name + ' \u2014 Lucas Vaz';
@@ -1577,11 +1580,11 @@
     var nextProject = projects.find(function(p) { return p.id === nextId; }) || projects[0];
 
     nav.innerHTML =
-      '<a href="project.html?id=' + prevProject.id + '">' +
+      '<a href="/work/' + prevProject.id + '">' +
         '<span class="nav-label" data-i18n="nav.prev">\u2190 Previous</span>' +
         '<span class="nav-name">' + prevProject.name + '</span>' +
       '</a>' +
-      '<a href="project.html?id=' + nextProject.id + '" style="text-align:right;">' +
+      '<a href="/work/' + nextProject.id + '" style="text-align:right;">' +
         '<span class="nav-label" data-i18n="nav.next">Next \u2192</span>' +
         '<span class="nav-name">' + nextProject.name + '</span>' +
       '</a>';

@@ -16,17 +16,24 @@
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="pt_BR">
+  <meta property="og:site_name" content="Lucas Vaz">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Lucas Vaz — Graphic Designer & Illustrator">
   <meta name="twitter:description" content="19+ years shaping visual identities and creative campaigns for global brands.">
   <meta name="twitter:image" content="https://www.lucasvfa.com.br/assets/img/cover.jpg">
   <meta name="theme-color" content="#000000">
   <link rel="canonical" href="https://www.lucasvfa.com.br/">
+  <link rel="alternate" hreflang="en" href="https://www.lucasvfa.com.br/">
+  <link rel="alternate" hreflang="pt-BR" href="https://www.lucasvfa.com.br/?lang=pt">
+  <link rel="alternate" hreflang="x-default" href="https://www.lucasvfa.com.br/">
   <!-- CSP active on production server via headers (vercel.json / _headers / .htaccess) -->
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6F514MQM3W"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6F514MQM3W');</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lucas Vaz","url":"https://www.lucasvfa.com.br","jobTitle":"Art Director, Graphic Designer & Illustrator","description":"Senior creative with 16+ years of experience in graphic design, illustration, 2D animation and art direction for global brands.","image":"https://www.lucasvfa.com.br/assets/img/hero-photo.png","knowsAbout":["Graphic Design","Illustration","Art Direction","2D Animation","Motion Design","Brand Identity","UI/UX Design"],"sameAs":["https://www.instagram.com/lucasvfa","https://www.linkedin.com/in/lucasvfa","https://x.com/lucasvfa"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lucas Vaz","alternateName":"lucasvfa","url":"https://www.lucasvfa.com.br","jobTitle":"Art Director, Graphic Designer & Illustrator","description":"Senior creative with 19+ years of experience in graphic design, illustration, 2D animation and art direction for global brands including P&G (Gillette, Ariel, Downy, Oral-B), Ketel One and Web3 projects.","image":"https://www.lucasvfa.com.br/assets/img/hero-photo.png","email":"contato@lucasvfa.com.br","telephone":"+55-34-98856-8664","address":{"@type":"PostalAddress","addressLocality":"Patos de Minas","addressRegion":"MG","addressCountry":"BR"},"worksFor":{"@type":"Organization","name":"Freelance"},"knowsLanguage":["Portuguese","English"],"knowsAbout":["Graphic Design","Illustration","Art Direction","2D Animation","Motion Design","Brand Identity","UI/UX Design","Character Design","Frame-by-frame Animation"],"sameAs":["https://www.instagram.com/lucasvfa","https://www.linkedin.com/in/lucasvfa","https://x.com/lucasvfa","https://t.me/lukessssss","https://wa.me/5534988568664"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Lucas Vaz — Art Direction & Design Studio","url":"https://www.lucasvfa.com.br","image":"https://www.lucasvfa.com.br/assets/img/cover.jpg","priceRange":"$$$","description":"Independent art direction, graphic design, illustration and 2D animation services for global brands and agencies. 19+ years of experience.","areaServed":{"@type":"Place","name":"Worldwide"},"address":{"@type":"PostalAddress","addressLocality":"Patos de Minas","addressRegion":"MG","addressCountry":"BR"},"founder":{"@type":"Person","name":"Lucas Vaz"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Creative Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Art Direction","description":"Creative direction for campaigns, brands and digital content."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand Design","description":"Visual identity, logo design and brand systems."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"2D Animation & Motion Design","description":"Frame-by-frame 2D animation, character animation and motion graphics."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Illustration","description":"Editorial, brand and character illustration."}}]}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Inter+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
@@ -1488,7 +1495,7 @@
   <section class="section" id="uiux">
     <h2 class="section-heading reveal" data-i18n="uiux.heading">UI/UX Design</h2>
     <div class="uiux-grid" id="uiux-grid">
-      <a class="uiux-card stagger-item" href="project.html?id=ui-ux-design">
+      <a class="uiux-card stagger-item" href="/work/ui-ux-design">
         <picture>
           <source srcset="assets/img/uiux-thumb.webp" type="image/webp">
           <img src="assets/img/uiux-thumb.png" alt="UI/UX Design" decoding="async">
@@ -1668,7 +1675,12 @@
       btn.addEventListener('click', () => setLang(btn.dataset.lang));
     });
 
-    setLang('en');
+    // Read ?lang= from URL (for hreflang / shared PT links), else default to 'en'
+    (function initLang() {
+      var urlLang = new URLSearchParams(window.location.search).get('lang');
+      var initial = (urlLang === 'pt' || urlLang === 'pt-BR') ? 'pt' : 'en';
+      setLang(initial);
+    })();
 
     // ===== SOCIAL ICONS TEMPLATE =====
     const socialLinks = [
@@ -1731,7 +1743,7 @@
 
     projects.forEach((p, idx) => {
       const isExternal = !!p.behance;
-      const href = isExternal ? p.behance : `project.html?id=${p.id}`;
+      const href = isExternal ? p.behance : `/work/${p.id}`;
       const num = String(idx + 1).padStart(2, '0');
 
       // Determine the media source and its extension
@@ -1858,7 +1870,7 @@
     ];
     const ilGrid = document.getElementById('illustrations-grid');
     ilGrid.innerHTML = personalProjects.map(p =>
-      `<a class="illustration-card stagger-item" href="project.html?id=${p.id}">
+      `<a class="illustration-card stagger-item" href="/work/${p.id}">
         ${webpImg(p.cover, p.name, 'loading="lazy"')}
         <div class="overlay">
           <span class="bento-overlay-btn" data-i18n="bento.see">SEE MORE</span>
@@ -1871,8 +1883,9 @@
 
     // ===== LOADER =====
     window.addEventListener('load', () => {
-      // Re-apply language after all dynamic elements are rendered
-      setLang('en');
+      // Re-apply current language after all dynamic elements are rendered
+      var currentLang = document.documentElement.lang === 'pt-BR' ? 'pt' : 'en';
+      setLang(currentLang);
     });
 
     // ===== MOBILE NAV =====

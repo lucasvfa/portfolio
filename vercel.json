@@ -1,5 +1,22 @@
 {
   "cleanUrls": true,
+  "rewrites": [
+    { "source": "/work/:slug", "destination": "/project.html" }
+  ],
+  "redirects": [
+    {
+      "source": "/project.html",
+      "has": [{ "type": "query", "key": "id", "value": "(?<slug>.+)" }],
+      "destination": "/work/:slug",
+      "permanent": true
+    },
+    {
+      "source": "/project",
+      "has": [{ "type": "query", "key": "id", "value": "(?<slug>.+)" }],
+      "destination": "/work/:slug",
+      "permanent": true
+    }
+  ],
   "headers": [
     {
       "source": "/(.*)",
