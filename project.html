@@ -1315,20 +1315,76 @@
 
     var project = projects[projectIndex];
 
-    // ===== DYNAMIC CANONICAL URL =====
-    var canonicalEl = document.querySelector('link[rel="canonical"]');
-    if (canonicalEl) canonicalEl.href = 'https://www.lucasvfa.com.br/work/' + projectId;
-    var ogUrl = document.querySelector('meta[property="og:url"]');
-    if (ogUrl) ogUrl.content = 'https://www.lucasvfa.com.br/work/' + projectId;
+    // ===== DYNAMIC SEO META PER PROJECT =====
+    var projectUrl = 'https://www.lucasvfa.com.br/work/' + projectId;
+    var projectUrlPt = projectUrl + '?lang=pt';
+    var projectImg = 'https://www.lucasvfa.com.br/' + (project.cover || 'assets/img/cover.jpg');
+    var projectTitleSeo = project.name + ' \u2014 ' + (project.type || 'Art Direction Case Study') + ' | Lucas Vaz';
+    var projectDescSeo = project.desc + ' Case study by Lucas Vaz, art director & graphic designer with 19+ years of experience.';
 
-    // ===== SET PAGE TITLE & OG META =====
-    document.title = project.name + ' \u2014 Lucas Vaz';
+    // Canonical + og:url
+    var canonicalEl = document.querySelector('link[rel="canonical"]');
+    if (canonicalEl) canonicalEl.href = projectUrl;
+    var ogUrl = document.querySelector('meta[property="og:url"]');
+    if (ogUrl) { ogUrl.content = projectUrl; } else {
+      var m = document.createElement('meta'); m.setAttribute('property', 'og:url'); m.content = projectUrl; document.head.appendChild(m);
+    }
+
+    // Page title
+    document.title = projectTitleSeo;
+
+    // Meta description (dynamic per project)
+    var metaDesc = document.querySelector('meta[name="description"]');
+    if (metaDesc) metaDesc.content = projectDescSeo;
+
+    // Open Graph
     var ogTitle = document.querySelector('meta[property="og:title"]');
     var ogDesc = document.querySelector('meta[property="og:description"]');
     var ogImg = document.querySelector('meta[property="og:image"]');
-    if (ogTitle) ogTitle.content = project.name + ' \u2014 Lucas Vaz Portfolio';
-    if (ogDesc) ogDesc.content = project.desc;
-    if (ogImg) ogImg.content = 'https://www.lucasvfa.com.br/' + (project.cover || 'assets/img/cover.jpg');
+    if (ogTitle) ogTitle.content = projectTitleSeo;
+    if (ogDesc) ogDesc.content = projectDescSeo;
+    if (ogImg) ogImg.content = projectImg;
+
+    // Twitter Card
+    var twTitle = document.querySelector('meta[name="twitter:title"]');
+    var twDesc = document.querySelector('meta[name="twitter:description"]');
+    var twImg = document.querySelector('meta[name="twitter:image"]');
+    if (twTitle) twTitle.content = projectTitleSeo;
+    if (twDesc) twDesc.content = projectDescSeo;
+    if (twImg) twImg.content = projectImg;
+
+    // hreflang alternates
+    ['en', 'pt-BR', 'x-default'].forEach(function(hl) {
+      var link = document.createElement('link');
+      link.rel = 'alternate';
+      link.hreflang = hl;
+      link.href = hl === 'pt-BR' ? projectUrlPt : projectUrl;
+      document.head.appendChild(link);
+    });
+
+    // JSON-LD CreativeWork (rich results for case studies)
+    var creativeWorkLd = {
+      '@context': 'https://schema.org',
+      '@type': 'CreativeWork',
+      'name': project.name,
+      'headline': projectTitleSeo,
+      'description': project.desc,
+      'url': projectUrl,
+      'image': projectImg,
+      'inLanguage': ['en', 'pt-BR'],
+      'creator': {
+        '@type': 'Person',
+        'name': 'Lucas Vaz',
+        'url': 'https://www.lucasvfa.com.br',
+        'jobTitle': 'Art Director, Graphic Designer & Illustrator'
+      },
+      'about': project.type || 'Art Direction',
+      'keywords': (project.type || '') + ', art direction, graphic design, Lucas Vaz, case study'
+    };
+    var ldScript = document.createElement('script');
+    ldScript.type = 'application/ld+json';
+    ldScript.textContent = JSON.stringify(creativeWorkLd);
+    document.head.appendChild(ldScript);
 
     // ===== RENDER HERO =====
     document.getElementById('projectTitle').textContent = project.name;
