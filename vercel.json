@@ -1,7 +1,7 @@
 {
   "cleanUrls": true,
   "rewrites": [
-    { "source": "/work/:slug", "destination": "/project" }
+    { "source": "/work/:slug", "destination": "/api/project?slug=:slug" }
   ],
   "redirects": [
     {
