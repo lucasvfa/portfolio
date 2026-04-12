@@ -32,7 +32,10 @@
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6F514MQM3W"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6F514MQM3W');</script>
+  <!-- Microsoft Clarity Heatmap (free) — replace wah43aikvc with your project ID from clarity.microsoft.com -->
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wah43aikvc");</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Lucas Vaz","alternateName":"lucasvfa","url":"https://www.lucasvfa.com.br","jobTitle":"Art Director, Graphic Designer & Illustrator","description":"Senior creative with 19+ years of experience in graphic design, illustration, 2D animation and art direction for global brands including P&G (Gillette, Ariel, Downy, Oral-B), Ketel One and Web3 projects.","image":"https://www.lucasvfa.com.br/assets/img/hero-photo.png","email":"contato@lucasvfa.com.br","telephone":"+55-34-98856-8664","address":{"@type":"PostalAddress","addressLocality":"Patos de Minas","addressRegion":"MG","addressCountry":"BR"},"worksFor":{"@type":"Organization","name":"Freelance"},"knowsLanguage":["Portuguese","English"],"knowsAbout":["Graphic Design","Illustration","Art Direction","2D Animation","Motion Design","Brand Identity","UI/UX Design","Character Design","Frame-by-frame Animation"],"sameAs":["https://www.instagram.com/lucasvfa","https://www.linkedin.com/in/lucasvfa","https://x.com/lucasvfa","https://t.me/lukessssss","https://wa.me/5534988568664"]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does Lucas Vaz work with international studios?","acceptedAnswer":{"@type":"Answer","text":"Yes. Lucas is based in Patos de Minas, Brazil, and works 100% remote. He is fluent in English, and his time zone overlaps comfortably with US East Coast and Western Europe. He is open to freelance, white-label, retainers and long-term contracts with international studios."}},{"@type":"Question","name":"What services does Lucas Vaz offer?","acceptedAnswer":{"@type":"Answer","text":"Art direction, brand design and visual identity, 2D frame-by-frame animation, motion design, illustration (editorial, brand and character), social media art direction, and UI/UX design. He has 19+ years of professional experience across all of these."}},{"@type":"Question","name":"What brands has Lucas Vaz worked with?","acceptedAnswer":{"@type":"Answer","text":"Lucas has worked with global brands including Gillette, Ariel, Downy, Oral-B (all P&G through New Vegas agency), Ketel One Botanical (Diageo), and multiple Web3 projects. His animation work for $BRETT aired during the UEFA 2024 broadcast and appeared on billboards in Taiwan."}},{"@type":"Question","name":"Is Lucas Vaz available for hire?","acceptedAnswer":{"@type":"Answer","text":"Yes. Lucas is currently freelance and available for project-based work, retainers, day rates, or white-label studio collaborations. He is also open to a senior full-time role at an international design or motion studio. Contact via WhatsApp, Telegram or email."}},{"@type":"Question","name":"What software does Lucas Vaz use?","acceptedAnswer":{"@type":"Answer","text":"Adobe Illustrator for branding, Photoshop for design and compositing, After Effects for animation and motion design, Figma for UI/UX, Clip Studio Paint and Procreate for illustration, and Premiere for video editing."}},{"@type":"Question","name":"How long does a typical project take?","acceptedAnswer":{"@type":"Answer","text":"Depending on scope: brand identity projects take 3-6 weeks, animation projects 2-4 weeks, and ongoing social media art direction is typically on a monthly retainer. Lucas scopes every project individually after an initial briefing call."}}]}</script>
   <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfessionalService","name":"Lucas Vaz — Art Direction & Design Studio","url":"https://www.lucasvfa.com.br","image":"https://www.lucasvfa.com.br/assets/img/cover.jpg","priceRange":"$$$","description":"Independent art direction, graphic design, illustration and 2D animation services for global brands and agencies. 19+ years of experience.","areaServed":{"@type":"Place","name":"Worldwide"},"address":{"@type":"PostalAddress","addressLocality":"Patos de Minas","addressRegion":"MG","addressCountry":"BR"},"founder":{"@type":"Person","name":"Lucas Vaz"},"hasOfferCatalog":{"@type":"OfferCatalog","name":"Creative Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"Art Direction","description":"Creative direction for campaigns, brands and digital content."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Brand Design","description":"Visual identity, logo design and brand systems."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"2D Animation & Motion Design","description":"Frame-by-frame 2D animation, character animation and motion graphics."}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Illustration","description":"Editorial, brand and character illustration."}}]}}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -871,6 +874,66 @@
     .uiux-card:focus-within .overlay { opacity: 1; }
     .uiux-card:focus-within img { transform: scale(1.03); }
 
+    /* ===== CLIENT LOGOS WALL ===== */
+    .clients-wall {
+      padding: clamp(4rem, 8vw, 6rem) var(--gutter);
+      text-align: center;
+    }
+    .clients-wall-label {
+      font-size: 0.65rem;
+      font-weight: 500;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--text-tertiary);
+      margin-bottom: clamp(2rem, 4vw, 3rem);
+    }
+    .clients-logos {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      gap: clamp(2rem, 4vw, 4rem);
+    }
+    .clients-logos img {
+      height: clamp(20px, 2.8vw, 32px);
+      width: auto;
+      opacity: 0.4;
+      transition: opacity 0.3s ease;
+    }
+    .clients-logos img:hover {
+      opacity: 0.85;
+    }
+    /* Ketel One is squarer — give it more height to match visual weight */
+    .clients-logos img[alt="Ketel One"] {
+      height: clamp(28px, 3.8vw, 44px);
+    }
+
+    /* ===== TESTIMONIAL ===== */
+    .testimonial-section {
+      padding: clamp(3rem, 6vw, 5rem) var(--gutter);
+      text-align: center;
+    }
+    .testimonial-quote {
+      font-family: 'Inter Display', 'Inter', sans-serif;
+      font-size: clamp(1.1rem, 2vw, 1.5rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--text);
+      max-width: 640px;
+      margin: 0 auto 1.5rem;
+      opacity: 0.9;
+    }
+    .testimonial-quote::before { content: '\201C'; }
+    .testimonial-quote::after { content: '\201D'; }
+    .testimonial-source {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+
     /* ===== SECTION SHARED ===== */
     .section { padding: clamp(9rem, 18vw, 15rem) var(--gutter); scroll-margin-top: var(--scroll-offset); }
     #projects { scroll-margin-top: var(--scroll-offset); }
@@ -1481,6 +1544,18 @@
     <h2 class="sr-only">Work</h2>
   </div>
 
+  <!-- ===================== CLIENT LOGOS ===================== -->
+  <section class="clients-wall reveal" aria-label="Trusted by global brands">
+    <p class="clients-wall-label" data-i18n="clients.label">Trusted by brands like</p>
+    <div class="clients-logos">
+      <img src="assets/img/logo-gillette.svg" alt="Gillette" loading="lazy" decoding="async">
+      <img src="assets/img/logo-ariel.png" alt="Ariel" loading="lazy" decoding="async">
+      <img src="assets/img/logo-downy.png" alt="Downy" loading="lazy" decoding="async">
+      <img src="assets/img/logo-oralb.png" alt="Oral-B" loading="lazy" decoding="async">
+      <img src="assets/img/logo-ketelone.png" alt="Ketel One" loading="lazy" decoding="async">
+    </div>
+  </section>
+
   <div class="divider" style="margin-top:clamp(8rem,16vw,14rem)" aria-hidden="true"></div>
 
   <!-- ===================== ILLUSTRATIONS ===================== -->
@@ -1617,7 +1692,9 @@
         'about.heading': 'Lucas <span class="accent">Vaz</span>',
         'about.bio': 'It all started because of Dragon Ball, when I tried to recreate the characters in my drawings. Nineteen years later, here I am creating visuals and campaigns for brands like <strong>Gillette, Ketel One</strong> and <strong>Downy</strong>.<br><br>My professional career started in 2007, but the real turning point came in 2011: fresh out of my Advertising degree, I founded <strong>Ag\u00EAncia Dom Quixote</strong>, focused on brand identity, promotional activations and corporate materials. In 2014, seeking more creative freedom, I stepped away and created <strong>Studio Astronauta</strong> \u2014 a space where I could explore my own visual path. Until 2022, I developed and executed online and offline campaigns for a wide range of brands.<br><br>In 2021, alongside the Studio, I joined <strong>New Vegas</strong>, a multi-format digital creative agency. As Art Director, I created campaigns for P&amp;G brands like <strong>Gillette, Ariel, Oral-B</strong> and <strong>Downy</strong>, as well as <strong>Ketel One</strong> and several pitches. I directed shoots that brought a fresh take on how those brands communicated digitally.<br><br>In 2024, I joined <strong>Ninety Eight</strong>, a creative agency focused on crypto and web3. I led the visual development of animated and illustrated digital campaigns, producing 2D animations, motion design and original illustrations. I also managed a team of designers and animators, ensuring creative direction and visual consistency across every project.<br><br>My work lives at the intersection of illustration, frame-by-frame 2D animation, motion design, art direction and branding.<br><br>Outside of that, I\u2019m a proud dad, a coffee enthusiast, a self-taught cook, and (when time allows) someone who sees videogames as art and culture, beyond just entertainment.',
         'bento.see': 'SEE MORE',
-        'uiux.heading': 'UI/UX Design'
+        'uiux.heading': 'UI/UX Design',
+        'clients.label': 'Trusted by brands like',
+        'testimonial.quote': 'Um orgulho de trabalho! Toda sorte pro seu futuro'
       },
       pt: {
         'nav.home': 'Início',
@@ -1635,7 +1712,9 @@
         'about.heading': 'Lucas <span class="accent">Vaz</span>',
         'about.bio': 'Tudo come\u00E7ou por causa de Dragon Ball quando eu tentava reproduzir os personagens nos meus desenhos. Dezenove anos depois, c\u00E1 estou criando visuais e campanhas para marcas como <strong>Gillette, Ketel One</strong> e <strong>Downy</strong>.<br><br>Minha carreira profissional come\u00E7ou em 2007, mas a virada real veio em 2011: rec\u00E9m-formado em Comunica\u00E7\u00E3o Social, fundei a <strong>Ag\u00EAncia Dom Quixote</strong>, focada em identidade visual, a\u00E7\u00F5es promocionais e materiais corporativos. Em 2014, buscando mais liberdade criativa, me afastei e criei o <strong>Studio Astronauta</strong>, um espa\u00E7o onde pude explorar meu pr\u00F3prio caminho visual. At\u00E9 2022, desenvolvi e executei campanhas online e offline para uma ampla gama de marcas.<br><br>Em 2021, em paralelo ao Studio, entrei na <strong>New Vegas</strong>, ag\u00EAncia digital de cria\u00E7\u00E3o multiformato. Como Diretor de Arte, criei campanhas para marcas P&amp;G como <strong>Gillette, Ariel, Oral-B</strong> e <strong>Downy</strong>, al\u00E9m de <strong>Ketel One</strong> e diversas concorr\u00EAncias. Dirigi shootings que trouxeram um refresh na forma como essas marcas se comunicavam no digital.<br><br>Em 2024, entrei na <strong>Ninety Eight</strong>, ag\u00EAncia criativa focada em crypto e web3. Liderei o desenvolvimento visual de campanhas digitais animadas e ilustradas, produzindo anima\u00E7\u00F5es 2D, motion design e ilustra\u00E7\u00F5es originais. Tamb\u00E9m coordenei uma equipe de designers e animadores, garantindo dire\u00E7\u00E3o criativa e consist\u00EAncia visual em todos os projetos.<br><br>Meu trabalho vive na interse\u00E7\u00E3o entre ilustra\u00E7\u00E3o, anima\u00E7\u00E3o 2D quadro a quadro, motion design, dire\u00E7\u00E3o de arte e branding.<br><br>Fora disso, sou um pai orgulhoso, apreciador de bons caf\u00E9s, cozinheiro autodidata e (quando sobra tempo) algu\u00E9m que enxerga videogames como arte e cultura, al\u00E9m de entretenimento.',
         'bento.see': 'VER MAIS',
-        'uiux.heading': 'UI/UX Design'
+        'uiux.heading': 'UI/UX Design',
+        'clients.label': 'Marcas que confiam no meu trabalho',
+        'testimonial.quote': 'Um orgulho de trabalho! Toda sorte pro seu futuro'
       }
     };
 

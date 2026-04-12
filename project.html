@@ -14,6 +14,8 @@
   <!-- Google Analytics (GA4) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-6F514MQM3W"></script>
   <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-6F514MQM3W');</script>
+  <!-- Microsoft Clarity Heatmap -->
+  <script type="text/javascript">(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,"clarity","script","wah43aikvc");</script>
   <meta property="og:title" content="Project — Lucas Vaz Portfolio">
   <meta property="og:description" content="Graphic Design, Illustration & Art Direction by Lucas Vaz">
   <meta property="og:type" content="website">
@@ -484,6 +486,68 @@
       display: block;
     }
 
+    /* ===== PROJECT CTA ===== */
+    .project-cta {
+      text-align: center;
+      padding: clamp(4rem, 8vw, 6rem) var(--gutter);
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    .project-cta-heading {
+      font-family: 'Inter Display', 'Inter', sans-serif;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: 600;
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+      letter-spacing: -0.02em;
+    }
+    .project-cta-sub {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .project-cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .project-cta-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: #fff;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+    .project-cta-btn--primary {
+      background: var(--accent);
+    }
+    .project-cta-btn--primary:hover {
+      background: #d63fc0;
+      transform: translateY(-1px);
+    }
+    .project-cta-btn--secondary {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+    }
+    .project-cta-btn--secondary:hover {
+      background: rgba(255,255,255,0.14);
+      transform: translateY(-1px);
+    }
+    .project-cta-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
     /* ===== PREV / NEXT NAV ===== */
     .project-nav {
       display: flex;
@@ -739,6 +803,26 @@
   <div class="media-grid-wrapper">
     <div class="media-grid" id="mediaGrid"></div>
   </div>
+
+  <!-- ===== PROJECT CTA ===== -->
+  <section class="project-cta reveal" id="projectCta">
+    <h2 class="project-cta-heading" id="ctaHeading" data-i18n="cta.heading">Need something like this?</h2>
+    <p class="project-cta-sub" id="ctaSub" data-i18n="cta.sub">19+ years of experience in art direction, design and animation. Remote from Brazil, available for studios and direct clients worldwide.</p>
+    <div class="project-cta-buttons">
+      <a href="https://wa.me/5534988568664" target="_blank" rel="noopener noreferrer" class="project-cta-btn project-cta-btn--primary">
+        <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp
+      </a>
+      <a href="mailto:contato@lucasvfa.com.br" class="project-cta-btn project-cta-btn--secondary">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        Email
+      </a>
+      <a href="https://t.me/lukessssss" target="_blank" rel="noopener noreferrer" class="project-cta-btn project-cta-btn--secondary">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.161c-.18 1.897-.962 6.502-1.359 8.627-.168.9-.5 1.201-.82 1.23-.697.064-1.226-.461-1.901-.903-1.056-.693-1.653-1.124-2.678-1.8-1.185-.781-.417-1.21.258-1.911.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.062 3.345-.479.329-.913.489-1.302.481-.428-.009-1.252-.242-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.831-2.529 6.998-3.015 3.333-1.386 4.025-1.627 4.477-1.635.099-.002.321.023.465.141.121.1.154.234.17.33.015.097.034.313.019.483z"/></svg>
+        Telegram
+      </a>
+    </div>
+  </section>
 
   <!-- Divider -->
   <div class="divider"></div>
@@ -1770,7 +1854,9 @@
         'nav.prev': '\u2190 Previous',
         'nav.next': 'Next \u2192',
         'nav.back': '\u2190 Back to Portfolio',
-        'nav.home': 'Home'
+        'nav.home': 'Home',
+        'cta.heading': 'Need something like this?',
+        'cta.sub': '19+ years of experience in art direction, design and animation. Remote from Brazil, available for studios and direct clients worldwide.'
       },
       pt: {
         'nav.work': 'Trabalhos',
@@ -1780,7 +1866,9 @@
         'nav.prev': '\u2190 Anterior',
         'nav.next': 'Pr\u00F3ximo \u2192',
         'nav.back': '\u2190 Voltar ao Portf\u00F3lio',
-        'nav.home': 'In\u00EDcio'
+        'nav.home': 'In\u00EDcio',
+        'cta.heading': 'Precisa de algo assim?',
+        'cta.sub': '19+ anos de experi\u00EAncia em dire\u00E7\u00E3o de arte, design e anima\u00E7\u00E3o. Remoto do Brasil, dispon\u00EDvel para studios e clientes diretos no mundo todo.'
       }
     };
 
@@ -1934,7 +2022,8 @@
       });
 
       // Translate project hero
-      var pid = new URLSearchParams(window.location.search).get('id');
+      var pidMatch = window.location.pathname.match(/^\/work\/([^\/\?#]+)/);
+      var pid = pidMatch ? decodeURIComponent(pidMatch[1]) : new URLSearchParams(window.location.search).get('id');
       if (pid && lang === 'pt' && projectI18n[pid]) {
         var t = projectI18n[pid];
         if (t.desc) document.getElementById('projectDesc').textContent = t.desc;
