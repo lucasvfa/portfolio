@@ -55,7 +55,7 @@ module.exports = (req, res) => {
     const BASE = 'https://www.lucasvfa.com.br';
     const ogTitle = esc(`${project.name} — ${project.type} | Lucas Vaz`);
     const ogDesc = esc(`${project.desc} Case study by Lucas Vaz — art director & graphic designer with 19+ years of experience.`);
-    const ogImg = `${BASE}/${project.img}`;
+    const ogImg = `${BASE}/api/og-image?slug=${slug}`;
     const ogUrl = `${BASE}/work/${slug}`;
 
     // Replace static OG tags with project-specific ones

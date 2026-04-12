@@ -2,8 +2,6 @@ node_modules/
 .DS_Store
 *.command
 .claude/
-package.json
-package-lock.json
 assets/img-backup/
 assets/img/_originals/
 optimize-assets.sh
