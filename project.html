@@ -490,7 +490,7 @@
     .project-cta {
       text-align: center;
       padding: clamp(4rem, 8vw, 6rem) var(--gutter);
-      max-width: 720px;
+      max-width: 900px;
       margin: 0 auto;
     }
     .project-cta-heading {
@@ -500,18 +500,26 @@
       line-height: 1.2;
       margin-bottom: 0.75rem;
       letter-spacing: -0.02em;
+      white-space: nowrap;
     }
     .project-cta-sub {
       font-size: 0.85rem;
       color: var(--text-secondary);
       margin-bottom: 2rem;
       line-height: 1.6;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
     }
     .project-cta-buttons {
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
       gap: 12px;
       justify-content: center;
+    }
+    @media (max-width: 480px) {
+      .project-cta-heading { white-space: normal; }
+      .project-cta-buttons { flex-wrap: wrap; }
     }
     .project-cta-btn {
       display: inline-flex;

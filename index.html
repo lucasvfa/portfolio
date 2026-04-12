@@ -895,7 +895,7 @@
       gap: clamp(2rem, 4vw, 4rem);
     }
     .clients-logos img {
-      height: clamp(20px, 2.8vw, 32px);
+      height: clamp(14px, 2vw, 22px);
       width: auto;
       opacity: 0.4;
       transition: opacity 0.3s ease;
@@ -903,9 +903,11 @@
     .clients-logos img:hover {
       opacity: 0.85;
     }
-    /* Ketel One is squarer — give it more height to match visual weight */
+    .clients-logos img[alt="Downy"] {
+      height: clamp(20px, 2.8vw, 32px);
+    }
     .clients-logos img[alt="Ketel One"] {
-      height: clamp(28px, 3.8vw, 44px);
+      height: clamp(22px, 3vw, 36px);
     }
 
     /* ===== TESTIMONIAL ===== */
