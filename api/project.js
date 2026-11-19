@@ -11,6 +11,7 @@ const OG_DATA = {
   'brett':           { name: 'BRETT', type: '2D Animation · Creative Concept · Illustration', desc: 'Creative concepts, 2D animation and illustration for $BRETT — including work that aired during the UEFA 2024 broadcast.', img: 'assets/img/brett_celeb_1.png' },
   'cosmopolitan':    { name: 'Cosmopolitan', type: 'Social Media · Art Direction · Motion Design', desc: 'Social media art direction and content creation for Cosmopolitan events.', img: 'assets/img/cosmo_cover.png' },
   'plano-b':         { name: 'Plano B', type: 'Branding · Visual Identity · Motion', desc: 'Complete branding and visual identity development for Plano B.', img: 'assets/img/planob_6.png' },
+  'panorama':        { name: 'Panorama Rooftop', type: 'Rebranding · Visual Identity · Motion', desc: 'Full rebrand for Panorama Rooftop, an electronic music party, on its 4th anniversary: new logo, visual identity, social media campaign and motion.', img: 'assets/img/panorama_1.png' },
   'black-duck':      { name: 'Black Duck Crossfit', type: 'Branding · Visual Identity · Motion', desc: 'Bold branding and visual identity for Black Duck Crossfit.', img: 'assets/img/bdc_1.png' },
   'wolf':            { name: 'Wolf', type: 'Illustration · Branding', desc: 'Visual identity and illustration work for Wolf memecoin project.', img: 'assets/img/wolf-cover.jpg' },
   'qace':            { name: 'QACE Dynamics', type: 'Logo Design · Branding', desc: 'Logo design and brand identity development for QACE Dynamics.', img: 'assets/img/qace_cover.jpg' },

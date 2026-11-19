@@ -318,6 +318,11 @@
     .media-item.square video {
       aspect-ratio: 1 / 1;
     }
+    /* Portrait items in a row of three: vertical reels shown whole, not cropped to a square (span: 'span-third portrait') */
+    .media-item.span-third.portrait,
+    .media-item.span-narrow.portrait {
+      aspect-ratio: 9 / 16;
+    }
     .media-item:hover img,
     .media-item:hover video {
       transform: scale(1.02);
@@ -981,6 +986,53 @@
           { src: 'assets/img/planob_7.png', type: 'img', span: 'span-full' },
           { src: 'assets/img/planob_9.png', type: 'img', span: 'span-full' },
           { src: 'assets/img/planob_10.png', type: 'img', span: 'span-full' }
+        ]
+      },
+      {
+        id: 'panorama', name: 'Panorama Rooftop', type: 'Rebranding · Visual Identity · Motion',
+        desc: 'Full rebrand for Panorama Rooftop, an electronic music party, on its 4th anniversary: new logo, visual identity, social media campaign and motion.',
+        role: 'Freelance',
+        cover: 'assets/img/panorama_cover.mp4',
+        categories: [
+          {
+            title: 'Rebrand',
+            media: [
+              { src: 'assets/img/panorama_1.png', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_2.png', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_3.png', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_4.png', type: 'img', span: 'span-half' },
+              { src: 'assets/img/panorama_5.png', type: 'img', span: 'span-half' },
+              { src: 'assets/img/panorama_6.png', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Visual Identity',
+            media: [
+              { src: 'assets/img/panorama_7.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_8.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_9.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_10.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_11.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_12.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_13.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_14.jpg', type: 'img', span: 'span-full' },
+              { src: 'assets/img/panorama_15.jpg', type: 'img', span: 'span-full' }
+            ]
+          },
+          {
+            title: 'Motion',
+            media: [
+              { src: 'assets/img/panorama_comeback.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_recap.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_reel_camila.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_reel_caio.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_reel_oflamme.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_reel_hyperion.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_reel_tef.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_reel_renata.mp4', type: 'video', span: 'span-third portrait', hasAudio: true },
+              { src: 'assets/img/panorama_reel_bezzi.mp4', type: 'video', span: 'span-third portrait', hasAudio: true }
+            ]
+          }
         ]
       },
       {
@@ -1715,7 +1767,7 @@
 
     // ===== PREV / NEXT NAVIGATION (follows homepage order) =====
     var homepageOrder = [
-      'gillette', 'downyariel', 'neiro', 'plano-b', 'brett',
+      'gillette', 'downyariel', 'panorama', 'neiro', 'plano-b', 'brett',
       'gillette-venus', 'qace', 'wolf', 'mong', 'ketel-one', 'doodi', 'cosmopolitan',
       'black-duck', 'veneza', 'candle', 'blockwise',
       'bezzi', 'masedo', 'bula', 'natur',
@@ -1911,6 +1963,11 @@
       'plano-b': {
         desc: 'Desenvolvimento completo de branding e identidade visual para Plano B.',
         type: 'Branding \u00b7 Identidade Visual \u00b7 Motion',
+        role: 'Freelance'
+      },
+      'panorama': {
+        desc: 'Rebrand completo da Panorama Rooftop, festa de m\u00fasica eletr\u00f4nica, nos 4 anos da festa: logo novo, identidade visual, campanha nas redes e motion.',
+        type: 'Rebranding \u00b7 Identidade Visual \u00b7 Motion',
         role: 'Freelance'
       },
       'neiro': {
