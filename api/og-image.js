@@ -16,7 +16,7 @@ const OG_DATA = {
   'brett':           { img: 'assets/img/brett_celeb_1.png' },
   'cosmopolitan':    { img: 'assets/img/cosmo_cover.png' },
   'plano-b':         { img: 'assets/img/planob_6.png' },
-  'panorama':        { img: 'assets/img/panorama_1.png' },
+  'panorama':        { img: 'assets/img/panorama_og.jpg' },
   'black-duck':      { img: 'assets/img/bdc_1.png' },
   'wolf':            { img: 'assets/img/wolf-cover.jpg' },
   'qace':            { img: 'assets/img/qace_cover.jpg' },
